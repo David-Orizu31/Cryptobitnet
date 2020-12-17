@@ -475,10 +475,7 @@
                                     <li itemprop="name"><a itemprop="url" class="navbar-link" href="/radiant" title="Radiant-Tech">Radiant-Tech</a></li>
                                   </ul>
                                 </li> -->
-                                <li class="mob-nav-language"><a href="#" title="Change Language"
-                                                                data-toggle="modal" data-target="#ModalLanguageMobile"><span
-                                                class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                        xlink:href="#flag-ENG"></use></svg></span> Change Language                            </a></li>
+                                <li class="mob-nav-language"><div id="google_translate_element"></div></li>
                             </ul>
                             <div class="nav-up col-xs-12 col-sm-12 pull-right">
                                 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement"
@@ -493,11 +490,15 @@
                                     </li>
                                 </ul>
         
-                                <span class="current-language no-collapse"><b>Select your language</b> <span
-                                            class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                    xlink:href="#flag-ENG"></use></svg></span> <button
-                                            type="button" data-toggle="modal"
-                                            data-target="#ModalLanguageMobile" aria-label="Change Language"></button></span>
+                                <span class="current-language no-collapse"><div id="google_translate_element"></div></span>
+
+                                <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                                </script>
+                                
+                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
         
                                 <p><svg class="gm-icon gm-icon-bullhorn"><use xlink:href="#gm-icon-bullhorn"></use></svg>
@@ -1483,11 +1484,11 @@
                     <label for="PageMessage">Enter your message here</label><textarea name="data[Page][message]" class="form-control" placeholder="Start typing here..." onkeyup="countChar(this)" cols="30" rows="6" id="PageMessage" required="required"></textarea>          <p class="letter-counter"><span id="charNum">0</span> / 240</p>
                   </div>
           
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <input type="file" name="data[Page][attachments][]"  class="form-control" multiple="multiple" id="attachment"/>          <h5><small
                         style="margin-bottom: 0px">Maximum upload size is 8MB.Maximum size per file is 2MB.</small>
                     </h5>
-                  </div>
+                  </div> -->
           
                   <div class="form-group form-group-captcha">
                     <input name="data[Page][verification]" class="form-control" placeholder="10 - 9 = ?" id="verification" required="required" autocomplete="off" maxlength="2" onkeypress="return event.charCode &gt;= 48 &amp;&amp; event.charCode &lt;= 57" type="text"/>        </div>
@@ -1501,11 +1502,11 @@
           
                   <input type="hidden" name="data[Page][check]" value="c112c572743e5e5c89fc4ae0dc81228bc4d72b09" id="PageCheck"/>
                   <div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="ae5ae1c251c79baeaa2c9b7f53307674a883220c%3A" id="TokenFields981945300"/><input type="hidden" name="data[_Token][unlocked]" value="Page.check" id="TokenUnlocked2070158681"/></div></form>
-                  <div class="row">
+                  <!-- <div class="row">
                     <div class="col-sm-12">
                       <span>If you are looking to contact our sales department click <a href="/contact-sales" title="Contact sales department">here</a>.</span>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
           

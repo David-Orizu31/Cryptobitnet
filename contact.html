@@ -475,10 +475,7 @@
                                     <li itemprop="name"><a itemprop="url" class="navbar-link" href="/radiant" title="Radiant-Tech">Radiant-Tech</a></li>
                                   </ul>
                                 </li> -->
-                                <li class="mob-nav-language"><a href="#" title="Change Language"
-                                                                data-toggle="modal" data-target="#ModalLanguageMobile"><span
-                                                class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                        xlink:href="#flag-ENG"></use></svg></span> Change Language                            </a></li>
+                                <li class="mob-nav-language"><div id="google_translate_element"></div></li>
                             </ul>
                             <div class="nav-up col-xs-12 col-sm-12 pull-right">
                                 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement"
@@ -493,11 +490,15 @@
                                     </li>
                                 </ul>
         
-                                <span class="current-language no-collapse"><b>Select your language</b> <span
-                                            class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                    xlink:href="#flag-ENG"></use></svg></span> <button
-                                            type="button" data-toggle="modal"
-                                            data-target="#ModalLanguageMobile" aria-label="Change Language"></button></span>
+                                <span class="current-language no-collapse"><div id="google_translate_element"></div></span>
+
+                                <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                                </script>
+                                
+                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
         
                                 <p><svg class="gm-icon gm-icon-bullhorn"><use xlink:href="#gm-icon-bullhorn"></use></svg>

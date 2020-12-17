@@ -480,10 +480,7 @@
                                     <li itemprop="name"><a itemprop="url" class="navbar-link" href="/radiant" title="Radiant-Tech">Radiant-Tech</a></li>
                                   </ul>
                                 </li> -->
-                                <li class="mob-nav-language"><a href="#" title="Change Language"
-                                                                data-toggle="modal" data-target="#ModalLanguageMobile"><span
-                                                class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                        xlink:href="#flag-ENG"></use></svg></span> Change Language                            </a></li>
+                                <li class="mob-nav-language"><div id="google_translate_element"></div></li>
                             </ul>
                             <div class="nav-up col-xs-12 col-sm-12 pull-right">
                                 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement"
@@ -498,11 +495,16 @@
                                     </li>
                                 </ul>
         
-                                <span class="current-language no-collapse"><b>Select your language</b> <span
-                                            class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                    xlink:href="#flag-ENG"></use></svg></span> <button
-                                            type="button" data-toggle="modal"
-                                            data-target="#ModalLanguageMobile" aria-label="Change Language"></button></span>
+                                <span class="current-language no-collapse"><div id="google_translate_element"></div></span>
+
+                                <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                                </script>
+                                
+                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                                
         
         
                                 <p><svg class="gm-icon gm-icon-bullhorn"><use xlink:href="#gm-icon-bullhorn"></use></svg>
@@ -589,19 +591,215 @@
                         <div id="panorama" style="background-image: url(img/gm-enigma-3-360-1-preview.jpg); background-size: cover; background-position: center;">
                             <div class="pnlm-controls-container"><div class="pnlm-zoom-controls pnlm-controls" style="display: block;"><div class="pnlm-zoom-in pnlm-sprite pnlm-control"></div><div class="pnlm-zoom-out pnlm-sprite pnlm-control"></div></div><div class="pnlm-fullscreen-toggle-button pnlm-sprite pnlm-fullscreen-toggle-button-inactive pnlm-controls pnlm-control" style="display: block;"></div></div>
                         </div>
-                        <div class="pnlm-load-button"><p>Click to<br>Load<br>Panorama</p><p></p></div>
+                       
                     </div>
         
                 </div>
             </div>
         </div>
+
+
+        <div id="gm-enigma-4" style="background:url(img/gm-enigma-4.jpg) no-repeat 50% 0;">
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-12"><div class="outer-shadow"><div class="row">
+      
+                  <div class="col-sm-6 gm-enigma-4-left">
+      
+                      <div class="enig4sll storynav">
+                          <div>
+                              <picture>
+                                  <!--[if IE 9]><video style="display: none"><![endif]-->
+                                  <source srcset="img/gm-enigma-4-iceland-geothermal-energy.webp" type="image/webp">
+                                  <!--[if IE 9]></video><![endif]-->
+                                  <img src="img/gm-enigma-4-iceland-geothermal-energy.jpg" alt="Energy (Iceland + Geothermal Energy)" title="Energy (Iceland + Geothermal Energy)" />
+                              </picture>
+                          </div>
+                          <div>
+                              <picture>
+                                  <!--[if IE 9]><video style="display: none"><![endif]-->
+                                  <source srcset="img/gm-enigma-4-mining-hardware.webp" type="image/webp">
+                                  <!--[if IE 9]></video><![endif]-->
+                                  <img src="img/gm-enigma-4-mining-hardware.jpg" alt="Mining Hardware" title="Mining Hardware" />
+                              </picture>
+                          </div>
+                          <div>
+                              <picture>
+                                  <!--[if IE 9]><video style="display: none"><![endif]-->
+                                  <source srcset="img/gm-enigma-4-mining-software-genesis-hive.webp" type="image/webp">
+                                  <!--[if IE 9]></video><![endif]-->
+                                  <img src="img/gm-enigma-4-mining-software-genesis-hive.jpg" alt="Mining Software / Genesis Hive" title="Mining Software / Genesis Hive" />
+                              </picture>
+                          </div>
+                          <div>
+                              <picture>
+                                  <!--[if IE 9]><video style="display: none"><![endif]-->
+                                  <source srcset="img/gm-enigma-4-minable-cryptocurrency-algorithm.webp" type="image/webp">
+                                  <!--[if IE 9]></video><![endif]-->
+                                  <img src="img/gm-enigma-4-minable-cryptocurrency-algorithm.jpg" alt="Minable Cryptocurrencies (Algorithms)" title="Minable Cryptocurrencies (Algorithms)" />
+                              </picture>
+                          </div>
+                                          </div>
+      
+                  </div>
+                  <div class="col-sm-6 gm-enigma-4-right">
+      
+                      <div class="enig4slr storynav">
+                          <div>
+                              <h2><span>01</span>Energy (Iceland + Geothermal Energy)</h2>
+                              <p>The results of cryptocurrency mining highly depend on infrastructure efficiency and electricity rates, which make renewable energy sources - such as geothermal and hydropower - the go-to solution for a cost-effective and clean mining operation. Today, over 80% of Iceland’s energy is provided by renewable sources.</p>
+                          </div>
+                          <div>
+                              <h2><span>02</span>Mining Hardware</h2>
+                              <p>Enigma is powered by a setup of optimized GPUs (graphic processing units). These GPUs are placed in ‘Rigs’ which are specifically designed to house as much hashing power as efficiently as possible. The miners’ software is configured for maximum performance by mining Kernels (hardware operating systems) like ‘<a href="https://blog.genesis-mining.com/664" title="Public release of sgminer-gm to optimize your mining operation" target="_blank" rel="noreferrer">sg-miner-gm</a>’ that we’ve developed in-house. We then manage it with our Genesis Hive interface.</p>
+                          </div>
+                          <div>
+                              <h2><span>03</span>Mining Software / Genesis Hive</h2>
+                              <p>Genesis Hive is our software interface which enables the efficient setup, configuration and management of all our mining facilities. Keeping track of all devices is key for the success of any mining operation. Besides the total hashrate, power consumption and facility temperatures there are a myriad of details and settings like firmware, mining pools and safety protections that need to be checked and managed.</p>
+                          </div>
+                          <div>
+                              <h2><span>04</span>Minable Cryptocurrencies (Algorithms)</h2>
+                              <p>Enigma is validating the blockchain networks of many of the majorly distributed cryptocurrencies such as Ethereum, Litecoin, Zcash, Dash and others. The most popular and widespread cryptocurrency, Bitcoin, is being mined in facilities with a different hardware setup (such as ASIC miners).</p>
+                          </div>
+                                          </div>
+      
+                      <div class="enig4slr-nav"></div>
+                  </div>
+                  <div class="clearfix"></div>
+      
+      
+                  <div class="storynavigator">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                                </div>
+      
+                  </div></div></div>
+      
+              </div>
+          </div>
+      </div>
+
+
+
+      <div id="gm-enigma-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12"><h2>More In-Depth Videos<span>Exclusive interviews & footage of our mining farm development process</span></h2></div>
+    
+                <div class="col-sm-12 video-slide">
+                    <div>
+                        <div class="video-item" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                                                  <meta itemprop="name" content="Anatomy of a Cryptocurrency Mining Rig /#EvolveWithUs - The Series Episode 1" />
+                            <meta itemprop="description" content="Take an exclusive look behind the scenes of Genesis Mining’s operations and experience our latest cryptocurrency mining farm. Don’t forget to subscribe to our Youtube channel. A new episode to be released every week." />
+                            <meta itemprop="uploadDate" content="2018-12-19 08:33:21" />
+                            <meta itemprop="duration" content="PT3M39S" />
+                            <meta itemprop="thumbnailURL" content="https://i.vimeocdn.com/video/747179891_640.jpg" />
+                            <meta itemprop="embedURL" content="https://vimeo.com/307264816" />
+    
+                            <div class="video-container">
+                                <iframe src="https://player.vimeo.com/video/307264816?app_id=122963" width="640" height="360" frameborder="0" title="Anatomy of a Cryptocurrency Mining Rig /#EvolveWithUs - The Series Episode 1" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            </div>
+                                                  <div class="video-description">
+                                <h3>#EvolveWithUs / Episode 1:<br /> Anatomy of a Mining Rig<span>Category / Interview</span></h3>
+                                <p>Iceland - May 2017. On behalf of Genesis Mining, CTO Stefan Schindler gives an in-depth explanation of how a cryptocurrency mining rig is built.</p>
+                                <small>Published on <time datetime="2018-12-19">19th Dec, 2018</time></small>
+                            </div>
+                        </div>
+                    </div><!-- Slider item -->
+    
+    
+                    <div>
+                        <div class="video-item" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                                                  <meta itemprop="name" content="Building a Cryptocurrency Mining Farm / Genesis Mining #EvolveWithUs - The Series Episode 2" />
+                            <meta itemprop="description" content="Iceland - May 2017. On behalf of Genesis Mining, Head of Operations Philip Salter explains the challenges of building a cryptocurrency mining farm! Check out our website for more exclusive content here: https://goo.gl/Ak1YqT Don’t forget to subscribe to our Youtube channel. A new episode to be released every week!" />
+                            <meta itemprop="uploadDate" content="2018-12-19 08:40:32" />
+                            <meta itemprop="duration" content="PT3M57S" />
+                            <meta itemprop="thumbnailURL" content="https://i.vimeocdn.com/video/747181519_640.jpg" />
+                            <meta itemprop="embedURL" content="https://vimeo.com/307266162" />
+    
+                            <div class="video-container">
+                                <iframe src="https://player.vimeo.com/video/307266162?app_id=122963" width="640" height="360" frameborder="0" title="Building a Cryptocurrency Mining Farm / Genesis Mining #EvolveWithUs - The Series Episode 2" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            </div>
+                                                  <div class="video-description">
+                                <h3>#EvolveWithUs / Episode 2:<br /> Building a Cryptocurrency Mining Farm<span>Category / Interview</span></h3>
+                                <p>Iceland - May 2017. On behalf of Genesis Mining, Head of Operations Philip Salter explains the challenges of building a cryptocurrency mining farm!</p>
+                                <small>Published on <time datetime="2018-12-19">19th Dec, 2018</time></small>
+                            </div>
+                        </div>
+                    </div><!-- Slider item -->
+    
+    
+                    <div>
+                        <div class="video-item" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                                                  <meta itemprop="name" content="The Rise of the Altcoin Market / Genesis Mining #EvolveWithUs - The Series Episode 3" />
+                            <meta itemprop="description" content="Iceland May 2017 - On behalf of Genesis Mining, CTO Stefan Schindler exposes the advantages of the so-called alternative cryptocurrencies and their future development in the Blockchain industry. Check out our website for more exclusive content here: https://goo.gl/Ak1YqT Don’t forget to subscribe to our Youtube channel." />
+                            <meta itemprop="uploadDate" content="2018-12-19 08:43:31" />
+                            <meta itemprop="duration" content="PT3M44S" />
+                            <meta itemprop="thumbnailURL" content="https://i.vimeocdn.com/video/747182271_640.jpg" />
+                            <meta itemprop="embedURL" content="https://vimeo.com/307266762" />
+    
+                            <div class="video-container">
+                                <iframe src="https://player.vimeo.com/video/307266762?app_id=122963" width="640" height="360" frameborder="0" title="The Rise of the Altcoin Market / Genesis Mining #EvolveWithUs - The Series Episode 3" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            </div>
+                                                  <div class="video-description">
+                                <h3>#EvolveWithUs / Episode 3:<br /> The Rise of the Altcoin Market<span>Category / Interview</span></h3>
+                                <p>Iceland May 2017 - On behalf of Genesis Mining, CTO Stefan Schindler exposes the advantages of the so-called alternative cryptocurrencies and their future development in the Blockchain industry.</p>
+                                <small>Published on <time datetime="2018-12-19">19th Dec, 2018</time></small>
+                            </div>
+                        </div>
+                    </div><!-- Slider item -->
+    
+    
+                    <div>
+                        <div class="video-item" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                                                  <meta itemprop="name" content="The Secret Ingredient of Cryptocurrency Mining / Genesis Mining #EvolveWithUs - The Series Episode 4" />
+                            <meta itemprop="description" content="On behalf of Genesis Mining, Head of Operations Philip Salter reveals the ultimate secret of large scale cryptocurrency mining: Hive, Genesis Mining’s own monitoring software. Learn more about Hive here: http://genesis-hive.com/." />
+                            <meta itemprop="uploadDate" content="2018-12-19 08:45:17" />
+                            <meta itemprop="duration" content="PT5M19S" />
+                            <meta itemprop="thumbnailURL" content="https://i.vimeocdn.com/video/747182879_640.jpg" />
+                            <meta itemprop="embedURL" content="https://vimeo.com/307267141" />
+    
+                            <div class="video-container">
+                                <iframe src="https://player.vimeo.com/video/307267141?app_id=122963" width="640" height="360" frameborder="0" title="The Secret Ingredient of Cryptocurrency Mining / Genesis Mining #EvolveWithUs - The Series Episode 4" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                            </div>
+                                                  <div class="video-description">
+                                <h3>#EvolveWithUs / Episode 4:<br /> The Secret Ingredient of Cryptocurrency Mining<span>Category / Interview</span></h3>
+                                <p>On behalf of Genesis Mining, Head of Operations Philip Salter reveals the ultimate secret of large scale cryptocurrency mining: Hive, Genesis Mining’s own monitoring software.</p>
+                                <small>Published on <time datetime="2018-12-19">19th Dec, 2018</time></small>
+                            </div>
+                        </div>
+                    </div><!-- Slider item -->
+    
+    
+                    <!-- Slider item -->
+    
+                    <!-- Slider item -->
+    
+                </div>
+    
+                <div class="col-xs-12 video-nav"></div>
+    
+            </div>
+        </div>
+    </div>
         
         
+    <div id="gm-enigma-6" style="background:url(img/gm-enigma-6.jpg) no-repeat 50% 0;">
+      <div class="container">
+          <div class="row">
+              <h1>Join Our Evolution</h1>
+              <a href="sign-up.html" title="Signup" class="btn btn-enigma-a btn-fade">Become a miner today!</a>
+          </div>
+      </div>
+  </div>
+
 
         <link type="text/css" rel="stylesheet" href="css/slick.min.css"/>
 <script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function () {
+ 
 
       /* Logo Slider */
     $('.logo-slide').slick({
@@ -781,7 +979,7 @@
       $(".fademe").removeClass("fadeout");
     });*/
 
-  });
+  
 </script>
 
 
@@ -795,6 +993,8 @@ pannellum.viewer('panorama', {
     "preview": "/img/Version3/enigma/gm-enigma-3-360-1-preview.jpg"
 });
 </script>
+
+<script type="text/javascript" src="js/widget-new.js" async="async"></script>
 
         <footer id="gm-content">
             <div class="gm-footer-top">        <div class="container">

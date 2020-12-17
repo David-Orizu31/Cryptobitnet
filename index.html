@@ -480,10 +480,7 @@
                                     <li itemprop="name"><a itemprop="url" class="navbar-link" href="/radiant" title="Radiant-Tech">Radiant-Tech</a></li>
                                   </ul>
                                 </li> -->
-                                <li class="mob-nav-language"><a href="#" title="Change Language"
-                                                                data-toggle="modal" data-target="#ModalLanguageMobile"><span
-                                                class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                        xlink:href="#flag-ENG"></use></svg></span> Change Language                            </a></li>
+                                <li class="mob-nav-language"><div id="google_translate_element"></div></li>
                             </ul>
                             <div class="nav-up col-xs-12 col-sm-12 pull-right">
                                 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement"
@@ -498,11 +495,16 @@
                                     </li>
                                 </ul>
         
-                                <span class="current-language no-collapse"><b>Select your language</b> <span
-                                            class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                    xlink:href="#flag-ENG"></use></svg></span> <button
-                                            type="button" data-toggle="modal"
-                                            data-target="#ModalLanguageMobile" aria-label="Change Language"></button></span>
+                              <span class="current-language no-collapse"><div id="google_translate_element"></div></span>
+
+                                <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                                </script>
+                                
+                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                                
         
         
                                 <p><svg class="gm-icon gm-icon-bullhorn"><use xlink:href="#gm-icon-bullhorn"></use></svg>
@@ -678,9 +680,9 @@
             
                                 </div>
                                 <a class="left carousel-control" href="#carousel-testimonials" role="button"
-                                   data-slide="prev" aria-label="Previous testimonial"><svg class="gm-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 28" style="fill: #e69500 !important;"><path d="M18.297 4.703L10 13l8.297 8.297a.99.99 0 0 1 0 1.406l-2.594 2.594a.99.99 0 0 1-1.406 0L2.703 13.703a.99.99 0 0 1 0-1.406L14.297.703a.99.99 0 0 1 1.406 0l2.594 2.594a.99.99 0 0 1 0 1.406z"/></svg></a>
+                                   data-slide="prev" aria-label="Previous testimonial"><svg class="gm-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 28" style="fill: rgb(10, 128, 50) !important;"><path d="M18.297 4.703L10 13l8.297 8.297a.99.99 0 0 1 0 1.406l-2.594 2.594a.99.99 0 0 1-1.406 0L2.703 13.703a.99.99 0 0 1 0-1.406L14.297.703a.99.99 0 0 1 1.406 0l2.594 2.594a.99.99 0 0 1 0 1.406z"/></svg></a>
                                 <a class="right carousel-control" href="#carousel-testimonials" role="button"
-                                   data-slide="next" aria-label="Next testimonial"><svg class="gm-chevron-right" viewBox="0 0 19 28" style="fill: #e69500 !important;"><path d="M17.297 13.703L5.703 25.297a.99.99 0 0 1-1.406 0l-2.594-2.594a.99.99 0 0 1 0-1.406L10 13 1.703 4.703a.99.99 0 0 1 0-1.406L4.297.703a.99.99 0 0 1 1.406 0l11.594 11.594a.99.99 0 0 1 0 1.406z"/></svg></a>
+                                   data-slide="next" aria-label="Next testimonial"><svg class="gm-chevron-right" viewBox="0 0 19 28" style="fill: rgb(10, 128, 50) !important;"><path d="M17.297 13.703L5.703 25.297a.99.99 0 0 1-1.406 0l-2.594-2.594a.99.99 0 0 1 0-1.406L10 13 1.703 4.703a.99.99 0 0 1 0-1.406L4.297.703a.99.99 0 0 1 1.406 0l11.594 11.594a.99.99 0 0 1 0 1.406z"/></svg></a>
                             </div>
             
             
@@ -746,14 +748,14 @@
                         </div> -->
                         <div class="col-sm-6 col-md-6 col-lg-6 gm-home-twitter">
                             <h3><a href="https://twitter.com/CryptoBitNet" target="_blank"
-                                   title="Twitter feed" rel="noreferrer" style="color:#e69500;">
+                                   title="Twitter feed" rel="noreferrer" style="color:rgb(10, 128, 50);">
                                     <svg class="gm-icon gm-icon-twitter">
                                         <use xlink:href="img/sprite.svg#gm-icon-twitter"></use>
                                     </svg>Twitter feed</a></h3>
                             <div id="carousel-tweet" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner"></div>
-                                <a class="left carousel-control" href="#carousel-tweet" aria-label="Previous tweet" role="button" data-slide="prev"><svg class="gm-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 28" style="fill: #e69500 !important;"><path d="M18.297 4.703L10 13l8.297 8.297a.99.99 0 0 1 0 1.406l-2.594 2.594a.99.99 0 0 1-1.406 0L2.703 13.703a.99.99 0 0 1 0-1.406L14.297.703a.99.99 0 0 1 1.406 0l2.594 2.594a.99.99 0 0 1 0 1.406z"/></svg></a>
-                                <a class="right carousel-control" href="#carousel-tweet" aria-label="Next tweet" role="button" data-slide="next"><svg class="gm-chevron-right" viewBox="0 0 19 28" style="fill: #e69500 !important;"><path d="M17.297 13.703L5.703 25.297a.99.99 0 0 1-1.406 0l-2.594-2.594a.99.99 0 0 1 0-1.406L10 13 1.703 4.703a.99.99 0 0 1 0-1.406L4.297.703a.99.99 0 0 1 1.406 0l11.594 11.594a.99.99 0 0 1 0 1.406z"/></svg></a>
+                                <a class="left carousel-control" href="#carousel-tweet" aria-label="Previous tweet" role="button" data-slide="prev"><svg class="gm-chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 28" style="fill: rgb(10, 128, 50) !important;"><path d="M18.297 4.703L10 13l8.297 8.297a.99.99 0 0 1 0 1.406l-2.594 2.594a.99.99 0 0 1-1.406 0L2.703 13.703a.99.99 0 0 1 0-1.406L14.297.703a.99.99 0 0 1 1.406 0l2.594 2.594a.99.99 0 0 1 0 1.406z"/></svg></a>
+                                <a class="right carousel-control" href="#carousel-tweet" aria-label="Next tweet" role="button" data-slide="next"><svg class="gm-chevron-right" viewBox="0 0 19 28" style="fill: rgb(10, 128, 50) !important;"><path d="M17.297 13.703L5.703 25.297a.99.99 0 0 1-1.406 0l-2.594-2.594a.99.99 0 0 1 0-1.406L10 13 1.703 4.703a.99.99 0 0 1 0-1.406L4.297.703a.99.99 0 0 1 1.406 0l11.594 11.594a.99.99 0 0 1 0 1.406z"/></svg></a>
                             </div>
                         </div>
                     </div>

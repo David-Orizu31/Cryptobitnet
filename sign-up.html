@@ -475,10 +475,7 @@
                                     <li itemprop="name"><a itemprop="url" class="navbar-link" href="/radiant" title="Radiant-Tech">Radiant-Tech</a></li>
                                   </ul>
                                 </li> -->
-                                <li class="mob-nav-language"><a href="#" title="Change Language"
-                                                                data-toggle="modal" data-target="#ModalLanguageMobile"><span
-                                                class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                        xlink:href="#flag-ENG"></use></svg></span> Change Language                            </a></li>
+                                <li class="mob-nav-language"><div id="google_translate_element"></div></li>
                             </ul>
                             <div class="nav-up col-xs-12 col-sm-12 pull-right">
                                 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement"
@@ -493,11 +490,15 @@
                                     </li>
                                 </ul>
         
-                                <span class="current-language no-collapse"><b>Select your language</b> <span
-                                            class="flag-box"><svg class="gm-flag flag-ENG"><use
-                                                    xlink:href="#flag-ENG"></use></svg></span> <button
-                                            type="button" data-toggle="modal"
-                                            data-target="#ModalLanguageMobile" aria-label="Change Language"></button></span>
+                                <span class="current-language no-collapse"><div id="google_translate_element"></div></span>
+
+                                <script type="text/javascript">
+                                function googleTranslateElementInit() {
+                                  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                                }
+                                </script>
+                                
+                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
         
                                 <p><svg class="gm-icon gm-icon-bullhorn"><use xlink:href="#gm-icon-bullhorn"></use></svg>
@@ -526,9 +527,46 @@
                     <h2>Sign up</h2>
                     <span>Please enter your personal information</span>
             
-                    <form action="/signup" autocomplete="off" id="UserRegisterForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="data[_Token][key]" value="9e54606b8d5d552a07c0251b42353bdbe6388127" id="Token62768347"/></div><input type="hidden" name="data[User][_source]" class="form-control" placeholder="" id="UserSource"/><div class="form-group required"><input name="data[User][email]" class="form-control" placeholder="E-mail" type="email" id="UserEmail" required="required"/></div><div class="form-group"><input name="data[User][change_password]" class="form-control" placeholder="Password" type="password" id="UserChangePassword"/><div class="form-hint">Password must be at least 8 characters long.</div></div><div class="form-group required"><input name="data[User][repeat_password]" class="form-control" placeholder="Repeat password" type="password" id="UserRepeatPassword" required="required"/></div><div class="form-group"><label for="UserPrivacy" class="splash-check"><input type="hidden" name="data[User][privacy]" id="UserPrivacy_" value="0"/><input type="checkbox" name="data[User][privacy]"  required="required" value="1" id="UserPrivacy"/><span class="checkb">&nbsp;</span><strong>I’ve read and understood the <a href="/privacy" target="_blank" title="Privacy Policy">Privacy Policy</a></strong></label></div><div class="form-group"><label for="UserNewsletter" class="splash-check"><input type="hidden" name="data[User][newsletter]" id="UserNewsletter_" value="0"/><input type="checkbox" name="data[User][newsletter]"  value="1" id="UserNewsletter"/><span class="checkb">&nbsp;</span><strong>I would like to receive occasional e-mails with discounts and offers</strong></label></div>        <div class="clearfix"></div>
+                    <form action="/signup" autocomplete="off" id="UserRegisterForm" method="post" accept-charset="utf-8">
+                        <div style="display:none;">
+                            <input type="hidden" name="_method" value="POST"/>
+                            <input type="hidden" name="data[_Token][key]" value="9e54606b8d5d552a07c0251b42353bdbe6388127" id="Token62768347"/>
+                        </div>
+                        <input type="hidden" name="data[User][_source]" class="form-control" placeholder="" id="UserSource"/>
+                        <div class="form-group required">
+                            <input name="data[User][Name]" class="form-control" placeholder="Full Name" type="text" id="UserName" required="required"/>
+                        </div>
+                        <div class="form-group required">
+                            <input name="data[User][Email]" class="form-control" placeholder="Username" type="email" id="UserEmail" required="required"/>
+                        </div>
+                        <div class="form-group required">
+                            <input name="data[User][Package]" class="form-control" placeholder="Package" type="text" id="UserPackage" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <input name="data[User][change_password]" class="form-control" placeholder="Password" type="password" id="UserChangePassword"/>
+                            <div class="form-hint">Password must be at least 8 characters long.</div>
+                        </div>
+                        <div class="form-group required">
+                            <input name="data[User][repeat_password]" class="form-control" placeholder="Confirm password" type="password" id="UserRepeatPassword" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="UserPrivacy" class="splash-check">
+                                <input type="hidden" name="data[User][privacy]" id="UserPrivacy_" value="0"/>
+                                <input type="checkbox" name="data[User][privacy]"  required="required" value="1" id="UserPrivacy"/>
+                                <span class="checkb">&nbsp;</span>
+                                <strong>I’ve read and understood the <a href="index.html#privacy" target="_blank" title="Privacy Policy">Privacy Policy</a></strong>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="UserNewsletter" class="splash-check">
+                                <input type="hidden" name="data[User][newsletter]" id="UserNewsletter_" value="0"/>
+                                <input type="checkbox" name="data[User][newsletter]"  value="1" id="UserNewsletter"/>
+                                <span class="checkb">&nbsp;</span><strong>I would like to receive occasional e-mails with discounts and offers</strong>
+                            </label>
+                        </div>        
+                        <div class="clearfix"></div>
                     
-                    <p class="text-center"><a href="/reset" class="text-warning">Lost your password?</a> | <a href="/login-panel" class="text-warning">Already have an account?</a></p>
+                    <p class="text-center"><a href="/reset" class="text-warning">Lost your password?</a> | <a href="login.html" class="text-warning">Already have an account?</a></p>
             
                                 <div class="form-group captcha-box"><div class="g-recaptcha" data-sitekey="6Lc53isUAAAAAL6S16redOiLlPCccIRj8HO3zPfz" data-callback="enableBtn"></div></div>
                             <div class="submit"><input  class="btn btn-primary" id="signUpButton" ="" type="submit" value="Sign up"/></div><div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="0a7e10c2dbbe8f5800811cb1d9ee416cdd9fb013%3AUser._source" id="TokenFields902649977"/><input type="hidden" name="data[_Token][unlocked]" value="User.form_type%7Cg-recaptcha-response" id="TokenUnlocked546343913"/></div></form>    </div>
