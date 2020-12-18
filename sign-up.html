@@ -503,7 +503,7 @@
         
                                 <p><svg class="gm-icon gm-icon-bullhorn"><use xlink:href="#gm-icon-bullhorn"></use></svg>
                                                                                                                       Chat working hours: 4:00 a.m. to 8:00 p.m. UTC, Monday to Friday                                                      <br />
-                                Contact us anytime via <a href="customer-service.html" title="Customer Service Center">web form</a> or your <a href="/contact-support" title="Customer support">account</a>.                        </p>
+                                Contact us anytime via <a href="customer-service.html" title="Customer Service Center">web form</a> or your <a href="contact.html" title="Customer support">account</a>.                        </p>
                             </div>
                         </div>
                     </div>
@@ -537,10 +537,19 @@
                             <input name="data[User][Name]" class="form-control" placeholder="Full Name" type="text" id="UserName" required="required"/>
                         </div>
                         <div class="form-group required">
-                            <input name="data[User][Email]" class="form-control" placeholder="Username" type="email" id="UserEmail" required="required"/>
+                            <input name="data[User][Name]" class="form-control" placeholder="Username" type="text" id="UserName" required="required"/>
                         </div>
                         <div class="form-group required">
-                            <input name="data[User][Package]" class="form-control" placeholder="Package" type="text" id="UserPackage" required="required"/>
+                            <input name="data[User][Email]" class="form-control" placeholder="Email" type="text" id="UserEmail" required="required"/>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" name="package" id="package">
+                                <option value="0" selected disabled>Package</option>
+                                <option value="1">BEGINNERS PACKAGE: $400 -10% = 3days </option>
+                                <option value="2">PREMIUM PACKAGES: $400-$3000-50% = 7days.</option>
+                                <option value="3">INVESTOR PACKAGES: $3500-$7000-100% =14days</option>
+                                <option value="4">VIP PACKAGE: $7000-unlimited -150% = 30days.</option>
+                              </select>
                         </div>
                         <div class="form-group">
                             <input name="data[User][change_password]" class="form-control" placeholder="Password" type="password" id="UserChangePassword"/>
