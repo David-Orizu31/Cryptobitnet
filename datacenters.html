@@ -495,15 +495,29 @@
                                     </li>
                                 </ul>
         
-                                <span class="current-language no-collapse"><div id="google_translate_element"></div></span>
+                                <div id="google_translate_desktop" style="margin-left: 220px; margin-top: 20px;"></div>
+
+                                <style>
+                                    @media (max-width: 750px) {
+                                      #google_translate_desktop {
+                                        margin-left: 0px !important;
+                                        margin-top: 0px !important;
+                                      }
+                                    }
+                                    </style>
+
+                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                                 <script type="text/javascript">
                                 function googleTranslateElementInit() {
                                   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
                                 }
+
+                                function googleTranslateElementInit() {
+                                  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_desktop');
+                                }
                                 </script>
                                 
-                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                                 
         
         
@@ -534,32 +548,32 @@
                     <p>The evolution of one of the world’s largest cryptocurrency mining facilities</p>
         
         
-                    <!-- <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
+                     <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-lg-4 col-lg-offset-4">
                                         <div class="video-outer">
                             <div class="video-container-wrapper" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
                                 <meta itemprop="name" content="The Secret Ingredient of Cryptocurrency Mining / Genesis Mining #EvolveWithUs - The Series Episode 4" />
                                 <meta itemprop="description" content="On behalf of Genesis Mining, Head of Operations Philip Salter reveals the ultimate secret of large scale cryptocurrency mining: Hive, Genesis Mining’s own monitoring software. Learn more about Hive here: http://genesis-hive.com/." /><meta itemprop="description" content="Iceland May 2017 - On behalf of Genesis Mining, CTO Stefan Schindler exposes the advantages of the so-called alternative cryptocurrencies and their future development in the Blockchain industry. Check out our website for more exclusive content here: https://goo.gl/Ak1YqT Don’t forget to subscribe to our Youtube channel." />
                                 <meta itemprop="uploadDate" content="2017-12-15T11:25:19-00:00" />
                                 <meta itemprop="duration" content="T5M20S" />
-                                <meta itemprop="thumbnailURL" content="https://i.ytimg.com/vi/NU76QVYYxOY/hqdefault.jpg" />
-                                <meta itemprop="embedURL" content="https://youtube.googleapis.com/v/NU76QVYYxOY" />
+                                <meta itemprop="thumbnailURL" content="img/datacenters-video/crypto-datacenters.jpg" />
+                                <meta itemprop="embedURL" content="img/datacenters-video/Untitled 2_1080p.mp4" />
         
                                 <div class="video-container">
-                                    <iframe id="yt" width="560" height="315" src="https://www.youtube.com/embed/NU76QVYYxOY" frameborder="0" allowfullscreen></iframe>
+                                    <iframe id="yt" width="560" height="315" src="img/datacenters-video/Untitled 2_1080p.mp4" frameborder="0"></iframe>
                                 </div>
                             </div>
         
                             <div class="play-video">
-                                <img src="img/hqdefault.jpg" alt="" title="" />
+                                <img src="img/datacenters-video/crypto-datacenters.jpg" alt="" title="" />
                                 <button class="btn btn-enigma-a btn-play-video"><span><svg id="gm-icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><style>.gm-icon-play-st0{fill:none;}</style><path class="gm-icon-play-st0" d="M0 0h48v48H0V0z"/><path class="gm-icon-play" d="M20 33l12-9-12-9v18zm4-29C12.9 4 4 12.9 4 24s8.9 20 20 20 20-9 20-20S35 4 24 4zm0 36c-8.8 0-16-7.2-16-16S15.2 8 24 8s16 7.2 16 16-7.2 16-16 16z"/></svg></span>Watch video</button>
                             </div>
                         </div>
                         
-                    </div> -->
+                    </div>
                     <div class="clearfix"></div>
         
                     <a href="sign-up.html" title="Become a miner today!" class="btn btn-enigma-a">Become a miner today!</a>
-                     <!-- <a href="#gm-enigma-5" title="Watch more" class="btn btn-enigma-d btn-scroll">Watch more</a> -->
+                    <a href="#gm-enigma-5" title="Watch more" class="btn btn-enigma-d btn-scroll">Watch more</a>
                 </div>
             </div>
         </div>
@@ -639,14 +653,7 @@
                                   <img src="img/gm-enigma-4-minable-cryptocurrency-algorithm.jpg" alt="Minable Cryptocurrencies (Algorithms)" title="Minable Cryptocurrencies (Algorithms)" />
                               </picture>
                           </div>
-                          <div>
-                            <picture>
-                                <!--[if IE 9]><video style="display: none"><![endif]-->
-                                <source srcset="img/gm-radiant.jpg" type="image/jpg">
-                                <!--[if IE 9]></video><![endif]-->
-                                <img src="img/gm-radiant.jpg" alt="Radiants" title="Radiants" />
-                            </picture>
-                        </div>
+                         
                                           </div>
       
                   </div>
@@ -800,6 +807,33 @@
     <div id="gm-radiant-3" style="background:url(img/gm-radiant-3.jpg) npo-repeat 50% 0;">
         <div class="container">
             <div class="row">
+                <div class="col-sm-6">
+             
+            <div class="video-item" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+                                                  <meta itemprop="name" content="The Secret Ingredient of Cryptocurrency Mining / Genesis Mining #EvolveWithUs - The Series Episode 4" />
+                            <meta itemprop="description" content="On behalf of Genesis Mining, Head of Operations Philip Salter reveals the ultimate secret of large scale cryptocurrency mining: Hive, Genesis Mining’s own monitoring software. Learn more about Hive here: http://genesis-hive.com/." />
+                            <meta itemprop="uploadDate" content="2018-12-19 08:45:17" />
+                            <meta itemprop="duration" content="PT5M19S" />
+                            <meta itemprop="thumbnailURL" content="https://i.vimeocdn.com/video/747182879_640.jpg" />
+                            <meta itemprop="embedURL" content="img/datacenters-video/Untitled 1_1080p_1.mp4" />
+    
+                            <div class="video-container">
+                                <iframe src="img/datacenters-video/Untitled 1_1080p_1.mp4" width="640" height="360" frameborder="0" title="The Secret Ingredient of Cryptocurrency Mining / Genesis Mining #EvolveWithUs - The Series Episode 4"></iframe>
+                            </div>
+                                                  <!-- <div class="video-description">
+                                <h3>#EvolveWithUs / Episode 4:<br /> The Secret Ingredient of Cryptocurrency Mining<span>Category / Interview</span></h3>
+                                <p>On behalf of Genesis Mining, Head of Operations Philip Salter reveals the ultimate secret of large scale cryptocurrency mining: Hive, Genesis Mining’s own monitoring software.</p>
+                                <small>Published on <time datetime="2018-12-19">19th Dec, 2018</time></small>
+                            </div> -->
+                            </div>
+                            
+                        </div>
+            </div>
+        </div>
+        <br><br><br>
+
+        <div class="container">
+            <div class="row">
     
                 <div class="col-sm-6">
                     <h2>“Radiant” is the new technology that makes us the market leader.</h2>
@@ -835,54 +869,53 @@
     </div>
 
 
-    <div id="gm-radiant-4" style="background:url(img/gm-radiant-4.jpg) no-repeat 50% 0;">
+
+
+    <div id="gm-enigma-4" style="background:url(img/gm-enigma-4.jpg) no-repeat 50% 0;">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12"><div class="outer-shadow"><div class="row">
     
-                <div class="col-sm-6 gm-radiant-4-left">
+                <div class="col-sm-6 gm-enigma-4-left">
     
                     <div class="enig4sll storynav">
                         <div>
                             <picture>
                                 <!--[if IE 9]><video style="display: none"><![endif]-->
-                                <source srcset="img/gm-radiant-4-high-end-mining-hardware.webp 1x, img/gm-radiant-4-high-end-mining-hardware@2x.webp 2x" type="image/webp">
-                                <source srcset="img/gm-radiant-4-high-end-mining-hardware.jpg 1x, img/gm-radiant-4-high-end-mining-hardware@2x.jpg 2x">
+                                <source srcset="img/gm-radiant-4-high-end-mining-hardware.webp" type="image/webp">
                                 <!--[if IE 9]></video><![endif]-->
-                                <img src="img/gm-radiant-4-high-end-mining-hardware.jpg" alt="High-End Mining Hardware" title="High-End Mining Hardware" />
+                                <img src="img/gm-radiant-4-next-gen-large-scale-mining.jpg" alt="Energy (Iceland + Geothermal Energy)" title="Energy (Iceland + Geothermal Energy)" />
                             </picture>
                         </div>
                         <div>
                             <picture>
                                 <!--[if IE 9]><video style="display: none"><![endif]-->
-                                <source srcset="img/gm-radiant-4-leading-cryptocurrency-mining-performance.webp 1x, img/gm-radiant-4-leading-cryptocurrency-mining-performance@2x.webp 2x" type="image/webp">
-                                <source srcset="img/gm-radiant-4-leading-cryptocurrency-mining-performance.jpg 1x, img/gm-radiant-4-leading-cryptocurrency-mining-performance@2x.jpg 2x">
+                                <source srcset="img/gm-radiant-4-leading-cryptocurrency-mining-performance.webp" type="image/webp">
                                 <!--[if IE 9]></video><![endif]-->
-                                <img src="img/gm-radiant-4-leading-cryptocurrency-mining-performance.jpg" alt="Leading Cryptocurrency Mining Performance" title="Leading Cryptocurrency Mining Performance" />
+                                <img src="img/gm-radiant-4-leading-cryptocurrency-mining-performance.jpg" alt="Mining Hardware" title="Mining Hardware" />
                             </picture>
                         </div>
                         <div>
                             <picture>
                                 <!--[if IE 9]><video style="display: none"><![endif]-->
-                                <source srcset="img/gm-radiant-4-next-gen-large-scale-mining.webp 1x, img/gm-radiant-4-next-gen-large-scale-mining@2x.webp 2x" type="image/webp">
-                                <source srcset="img/gm-radiant-4-next-gen-large-scale-mining.jpg 1x, img/gm-radiant-4-next-gen-large-scale-mining@2x.jpg 2x">
+                                <source srcset="img/gm-radiant-4-next-gen-large-scale-mining.webp" type="image/webp">
                                 <!--[if IE 9]></video><![endif]-->
-                                <img src="img/gm-radiant-4-next-gen-large-scale-mining.jpg" alt="The next generation of large-scale mining farms" title="The next generation of large-scale mining farms" />
+                                <img src="img/gm-radiant-4-next-gen-large-scale-mining.jpg" alt="Mining Software / Genesis Hive" title="Mining Software / Genesis Hive" />
                             </picture>
                         </div>
                         <div>
                             <picture>
                                 <!--[if IE 9]><video style="display: none"><![endif]-->
-                                <source srcset="img/gm-radiant-4-perfect-mining-locations.webp 1x, img/gm-radiant-4-perfect-mining-locations@2x.webp 2x" type="image/webp">
-                                <source srcset="img/gm-radiant-4-perfect-mining-locations.jpg 1x, img/gm-radiant-4-perfect-mining-locations@2x.jpg 2x">
+                                <source srcset="img/gm-radiant-4-perfect-mining-locations.webp" type="image/webp">
                                 <!--[if IE 9]></video><![endif]-->
-                                <img src="img/gm-radiant-4-perfect-mining-locations.jpg" alt="The perfect locations for mining" title="The perfect locations for mining" />
+                                <img src="img/gm-radiant-4-perfect-mining-locations.jpg" alt="Minable Cryptocurrencies (Algorithms)" title="Minable Cryptocurrencies (Algorithms)" />
                             </picture>
                         </div>
-                    </div>
+                        
+                                        </div>
     
                 </div>
-                <div class="col-sm-6 gm-radiant-4-right">
+                <div class="col-sm-6 gm-enigma-4-right">
     
                     <div class="enig4slr storynav">
                         <div>
@@ -902,7 +935,8 @@
                             <h2><span>04</span>The perfect locations for mining</h2>
                             <p>Both of our Data center in Iceland and Sweden are powered by geothermal and hydro-electric energy. In addition to the cold climate in which we build our data centers, They employ temperature control systems and efficient airflow management cuts down power cost significantly. We design our data centers layout in a way so that thermodynamics does its job and we have as little cost as possible with cooling.</p>
                         </div>
-                    </div>
+                        
+                                        </div>
     
                     <div class="enig4slr-nav"></div>
                 </div>
@@ -914,7 +948,8 @@
                   <div></div>
                   <div></div>
                   <div></div>
-                </div> -->
+                  
+                              </div> -->
     
                 </div></div></div>
     
@@ -1562,6 +1597,7 @@ pannellum.viewer('panorama', {
             <!-- <script src="bootstrap/js/jquery.min.js"></script>
             <script src="bootstrap/js/popper.min.js"></script>
             <script src="bootstrap/js/bootstrap.min.js"></script> -->
+            <script src="js/svg4everybody.min.js"></script>
             <script type="text/javascript">svg4everybody();</script>
         
             <!--[if lte IE 9]>

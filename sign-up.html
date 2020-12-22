@@ -490,15 +490,28 @@
                                     </li>
                                 </ul>
         
-                                <span class="current-language no-collapse"><div id="google_translate_element"></div></span>
+                                <div id="google_translate_desktop" style="margin-left: 220px; margin-top: 20px;"></div>
+
+                                <style>
+                                    @media (max-width: 750px) {
+                                      #google_translate_desktop {
+                                        margin-left: 0px !important;
+                                        margin-top: 0px !important;
+                                      }
+                                    }
+                                    </style>
+
+                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
                                 <script type="text/javascript">
                                 function googleTranslateElementInit() {
                                   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
                                 }
+
+                                function googleTranslateElementInit() {
+                                  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_desktop');
+                                }
                                 </script>
-                                
-                                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
         
         
                                 <p><svg class="gm-icon gm-icon-bullhorn"><use xlink:href="#gm-icon-bullhorn"></use></svg>
@@ -1044,6 +1057,7 @@
             <!-- <script src="bootstrap/js/jquery.min.js"></script>
             <script src="bootstrap/js/popper.min.js"></script>
             <script src="bootstrap/js/bootstrap.min.js"></script> -->
+            <script src="js/svg4everybody.min.js"></script>
             <script type="text/javascript">svg4everybody();</script>
             
             <!--[if lte IE 9]>
