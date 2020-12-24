@@ -293,22 +293,22 @@
                 <div class="mma">
                     <div class="row">
                         <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8">
-                                                        <h1>DASHBOARD</h1>
-                                                                                <p>Check the overview of the most recent data</p>
+                                                        <h1>DEPOSIT</h1>
+                                                                                <p>Deposit into your account.</p>
                                                 </div>
                         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4">
                             <div class="limiter">
                                 <p>
                                                                     <a class="nav-notification message-toggle" href="#" v-on:click="messageToggle">
-                                                                        <!--  <svg class="gm-icon gm-icon-notification">
+                                       <!--  <svg class="gm-icon gm-icon-notification">
                                             <title>Messages</title>
                                             <use xlink:href="/img/Version3/sprite_dash.svg#gm-icon-notification"></use>
                                         </svg> -->
-                                         <i class="fa fa-bell gm-icon" aria-hidden="true" title="Messages" style="font-size: 20px; padding-top: 10px;"></i>
-                                        <span v-show="showNewMessagesDot" class="messages-new" ></span>
+                                        <i class="fa fa-bell gm-icon" aria-hidden="true" title="Messages" style="font-size: 20px; padding-top: 10px;"></i>
+                                        <span v-show="showNewMessagesDot" class="messages-new"></span>
                                     </a>
                                     <a class="nav-logout" href="/logout" title="Logout">
-                                        <!-- <svg class="gm-icon gm-icon-logout"><title>Logout</title>
+                                         <!-- <svg class="gm-icon gm-icon-logout"><title>Logout</title>
                                             <use xlink:href="/img/Version3/sprite_dash.svg#gm-icon-logout"></use>
                                         </svg> -->
                                         <i class="fa fa-power-off" aria-hidden="true" style="font-size: 20px !important; padding-top: 10px;"></i>
@@ -319,10 +319,10 @@
                     </div>
                 </div>
             </div>
-
+    
                     <div class="side-notification-overlay">
               <div class="side-notification">
-
+    
                 <div class="notification-top">
                   <h5>Messages</h5>
                   <p>Dashboard message center</p>
@@ -330,19 +330,19 @@
                     <li class="close-notification message-toggle"><span class="icon-box" title="Close"><i class="gm-icon">&times;</i></span></li>
                   </ul>
                 </div>
-
+    
                 <ul class="notification-list">
                     <template v-if="messages.total > 0">
                         <li v-for="item in messages.data" :class="{['message-' + (item.type || 'default')]: true, 'message-new' : isMessageNew(item), 'message-dialog' : showDialog === item._id}">
-
+    
                             <h4>{{ showTitle(item) }}</h4>
                             <span>{{ item.releaseAt | dateformat('Do MMMM YYYY HH:mm') }}</span>
                             <span class="clearfix"></span>
                             <div class="message-text" v-html="generatedMarkdown(showText(item))"></div>
                             <button v-if="showDialog !== item._id" v-on:click="attemptHide(item._id)" class="icon-box ics"><i class="gm-icon-close"></i></button>
                             <button v-else v-on:click="showDialog = false" class="icon-box ics"><i class="gm-icon-close"></i></button>
-
-
+    
+    
                           <transition name="slide-from-right">
                               <div class="message-deletion" v-if="showDialog === item._id">
                                   <h4>Are you sure you want to delete this message?</h4>
@@ -359,38 +359,38 @@
                                   </label>
                               </div>
                           </transition>
-
+    
                         </li>
                     </template>
                     <li v-else class="none">
                         <p>No new messages</p>
                     </li>
                 </ul>
-
+    
                 <div v-bind:class="notificationBottom">
                     <button v-on:click="previousPage(messages.current_page)" class="icon-box ics" title="Previous messages"><i class="gm-icon-arrow-left"></i></button>
                     <button v-on:click="nextPage(messages.current_page)" class="icon-box ics" title="Next messages"><i class="gm-icon-arrow-right"></i></button>
                 </div>
-
+    
               </div>
               <div class="side-notification-close message-toggle"></div>
             </div>
-
+            
         </div>
-
-
+    
+    
         <div class="collapse navbar-collapse" id="main-menu">
-
+    
             <div class="nav-user-info">
                 <h2>Welcome back            </h2>
                 <span class="fa fa-user"></span>
             </div>
-
-
+    
+    
             <ul class="nav navbar-nav ">
-
+    
                                                     <li class="start-mining">
-                            <div class="profile">
+                            <div class="profile">                           
                             <img src="profile/user-profile.png" alt="profile-picture" class="img-responsive" style="width: 60px; border-radius: 50%; margin-left: 95px; margin-bottom: 10px;">
                             <p style="color: white; margin-right: 30px;">Username</p>
                             <button class="btn btn-primary" style="font-size: 12px !important; border-radius: 0px !important; margin-left: -20px;"> <i class="fa fa-star" aria-hidden="true" style="color: black !important; background-color: white !important;"></i> Premium</button>
@@ -399,11 +399,11 @@
                         </li>
                         <br><br><br><br><br>
 
-                                                    <li class="active">
+                                                    <li>
                         <a class="navbar-link" href="dashboard.html"><span class="fa">
-                            <!-- <svg class="gm-icon gm-icon-dashboard"><use
+                             <!-- <svg class="gm-icon gm-icon-dashboard"><use
                                             xlink:href="/img/Version3/sprite_dash.svg#gm-icon-dashboard"></use></svg> -->
-                                <i class="fa fa-dashboard gm-icon" aria-hidden="true" style="font-size: 18px;"></i>
+                                            <i class="fa fa-dashboard gm-icon" aria-hidden="true" style="font-size: 18px;"></i>
                                         </span>
                             <b class="nav-text">Dashboard</b></a>
                     </li>
@@ -413,11 +413,11 @@
                                             xlink:href="/img/Version3/sprite_dash.svg#gm-icon-mining-allocation"></use></svg></span>
                             <b class="nav-text">Mining Allocation</b></a>
                     </li> -->
-                    <li>
+                    <li class="active">
                         <a class="navbar-link" href="deposit.html"><span class="fa">
                             <!-- <svg class="gm-icon gm-icon-my-output"><use
                                             xlink:href="/img/Version3/sprite_dash.svg#gm-icon-my-output"></use></svg> -->
-                            <i class="fa fa-money gm-icon" aria-hidden="true" style="font-size: 18px;"></i>
+                                            <i class="fa fa-money gm-icon" aria-hidden="true" style="font-size: 18px;"></i>
                                         </span>
                             <b class="nav-text">Deposit</b></a>
                     </li>
@@ -433,7 +433,7 @@
                         <a class="navbar-link" href="activity.html"><span class="fa">
                             <!-- <svg class="gm-icon gm-icon-my-output"><use
                                             xlink:href="/img/Version3/sprite_dash.svg#gm-icon-my-output"></use></svg> -->
-                                <i class="fa fa-download gm-icon" aria-hidden="true" style="font-size: 18px;"></i>
+                                            <i class="fa fa-download gm-icon" aria-hidden="true" style="font-size: 18px;"></i>
                                         </span>
                             <b class="nav-text">Activity</b></a>
                     </li>
@@ -446,7 +446,7 @@
                             <!-- <svg
                                         class="gm-icon gm-icon-my-account"><use
                                             xlink:href="/img/Version3/sprite_dash.svg#gm-icon-my-account"></use></svg> -->
-                                <i class="fa fa-user gm-icon" aria-hidden="true" style="font-size: 18px;"></i>
+                                            <i class="fa fa-user gm-icon" aria-hidden="true" style="font-size: 18px;"></i>
                                         </span>
                             <b class="nav-text">My Account</b> <b class="caret"></b></a>
                         <ul class="dropdown-menu" style="background-color: transparent !important; position: relative !important;">
@@ -502,7 +502,7 @@
            }
         }
     </style>
-
+    
     <script src="js/vue-2.5.16.min.js"></script>
     <script src="js/axios-0.18.0.min.js"></script>
     <script src="js/moment.min.js"></script>
@@ -518,417 +518,308 @@
         e.preventDefault();
       });
     });
-    </script></header>
+    </script></header> 
 
-    <div id="main-container">
-        <div class="container">
-                        <div id="mma-flash" class="mma">
-                    <div class="row">
-
-                                                <div class="col-sm-12">
-
-
-
-                                    <p></p>
-                                                                                                                    </div>
-
-
-
-
-
-                                                <div class="col-sm-12"><div id="flashMessage" class="alert alert-success">Login successful. Please activate 2 Factor Authentication by going to the <a href="/my-account" title="Settings">Settings</a> section.</div></div>
-                                        </div>
-                </div>
-
-
-
-
-
-
-
-
-
-    <!-- hash power -->
-    <div id="current-mining" class="mma mma-bc1">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="cmg cmg-1">
-                    <span class="cpwr"><svg class="icon gm-icon-dashboard-power"><use xlink:href="#gm-icon-dashboard-power"></use></svg></span>
-
-                    <div class="cmc">
-                                            <b>0.0000 TH/s</b>
-
-                        <p>Bitcoin                        <small>Hashrate</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="cmg cmg-2">
-                    <span class="cpwr"><svg class="icon gm-icon-dashboard-power"><use xlink:href="#gm-icon-dashboard-power"></use></svg></span>
-
-                    <div class="cmc">
-                                            <b>0.0000 TH/s</b>
-
-                        <p>Bitcoin (Radiant)
-                            <small>Hashrate</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="cmg cmg-3">
-                    <span class="cpwr"><svg class="icon gm-icon-dashboard-power"><use xlink:href="#gm-icon-dashboard-power"></use></svg></span>
-
-                    <div class="cmc">
-                                            <b>0.0000 MH/s</b>
-
-                        <p>Dash (X11)                        <small>Hashrate</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="cmg cmg-4">
-                    <span class="cpwr"><svg class="icon gm-icon-dashboard-power"><use xlink:href="#gm-icon-dashboard-power"></use></svg></span>
-
-                    <div class="cmc">
-                                            <b>0.0000 MH/s</b>
-
-                        <p>Litecoin                        <small>Hashrate</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-                    <div class="col-sm-3">
-                <div class="cmg cmg-5">
-                    <span class="cpwr"><svg class="icon gm-icon-dashboard-power"><use xlink:href="#gm-icon-dashboard-power"></use></svg></span>
-
-                    <div class="cmc">
-                                            <b>0.0000 MH/s</b>
-
-                        <p>Ether                        <small>Hashrate</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="cmg cmg-6">
-                    <span class="cpwr"><svg class="icon gm-icon-dashboard-power"><use xlink:href="#gm-icon-dashboard-power"></use></svg></span>
-
-                    <div class="cmc">
-                                            <b>0.0000 H/s</b>
-
-                        <p>Zcash                        <small>Hashrate</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="cmg cmg-7">
-                    <span class="cpwr"><svg class="icon gm-icon-dashboard-power"><use xlink:href="#gm-icon-dashboard-power"></use></svg></span>
-
-                    <div class="cmc">
-                                            <b>0.0000 H/s</b>
-
-                        <p>Monero                        <small>Hashrate</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="cmg cmg-8">
-                    <span class="cpwr"><svg class="icon gm-icon-dashboard-power"><use xlink:href="#gm-icon-dashboard-power"></use></svg></span>
-
-                    <div class="cmc">
-                                            <b>0.0000 H/s</b>
-
-                        <p>Monero Classic                        <small>Hashrate</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12">&nbsp;</div>
+<div id="main-container">
+    <div class="container">
+        <div class="deposit" style="padding: 20px;">
+        <h4>DEPOSIT</h4>
+        <p>In order to make a Deposit into your mining account we advise you read through the following steps:</p>
         </div>
-    </div>
-    <!-- hashing power -->
 
-
-    <!-- button boxes -->
-    <div id="current-mining-boxes" class="mma mma-bc1">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="cmb-allocate">
-                    <h3>Mining Allocation</h3>
-                    <p>Allocate your hashpower</p>
-                    <a href="/mining-allocation" role="button" class="btn btn-primary mining-hp-allocation pull-right"><span class="fa fa-signal"></span>Configure miners</a>
-                    <svg class="icon gm-icon-dashboard-mining-allocation"><use xlink:href="#gm-icon-dashboard-mining-allocation"></use></svg>
-                </div>
-            </div>
-
-            <div class="col-sm-6">
-                <div class="cmb-upgrade">
-                    <h3>Buy Hashpower</h3>
-                    <p>Purchase more hashpower</p>
-                    <a href="/upgrade-hashpower/universal" role="button" class="btn btn-warning order-hp-dash pull-right"><span class="fa fa-bolt"></span>Buy Hashpower</a>
-                    <svg class="icon gm-icon-dashboard-upgrade-hashpower"><use xlink:href="#gm-icon-dashboard-upgrade-hashpower"></use></svg>
-                </div>
-            </div>
+        <div class="steps text-center">
+           <h3><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> STEP 1 </h3>
+           <p>Tap to request and copy the address of whatever coin you want to mine.</p>
         </div>
-    </div>
-    <!-- button boxes -->
 
-
-    <div id="my-earnings-sha256" class="mma mma-bc1">
-        <div class="row">
-            <h2 class="col-sm-12"><span></span>Output chart - SHA-256 (Bitcoin mining)</h2>
-
-            <div class="col-sm-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>Output in USD</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="pull-right panel-btns"></div>
-                            </div>
+        <div id="current-mining" class="mma mma-bc1">
+           <div class="row">
+               <div class="col-sm-3">
+                   <div class="logo-background text-center">
+                        <img src="img/bitcoin-logo (1).png" alt="bitcoin-logo" class="img-responsive image" style="width: 70px;">
+                        <p style="color: white;">BITCOIN</p>
+                        <div class="middle">
+                            <button class="btn btn-request">Request</button>
                         </div>
+                   </div>
+               </div>
+               <div class="col-sm-3">
+                <div class="logo-background text-center">
+                    <img src="img/ethereum-trans.jpg" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
+                    <p style="color: white;">ETHEREUM</p>
+                    <div class="middle">
+                        <button class="btn btn-request">Request</button>
                     </div>
-                    <div class="panel-body">
-                        <div class="hero-graph" id="hero-graph-sha256"></div>
+               </div>
+               </div>
+               <div class="col-sm-3">
+                <div class="logo-background text-center">
+                    <img src="img/stellar-logo.png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
+                    <p style="color: white;">STELLAR</p>
+                    <div class="middle">
+                        <button class="btn btn-request">Request</button>
                     </div>
-                </div>
-            </div>
+               </div>
+               </div>
+               <div class="col-sm-3">
+                <div class="logo-background text-center">
+                    <img src="img/bitcoin-logo (1).png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
+                    <p style="color: white;">DOGECOIN</p>
+                    <div class="middle">
+                        <button class="btn btn-request">Request</button>
+                    </div>
+               </div>
+               </div>
+               <div class="col-sm-3">
+                <div class="logo-background text-center">
+                    <img src="img/bitcoin-logo (1).png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
+                    <p style="color: white;">LITECOIN</p>
+                    <div class="middle">
+                        <button class="btn btn-request">Request</button>
+                    </div>
+               </div>
+               </div>
+           </div>
         </div>
-    </div>
-    <div id="my-earnings-scrypt" class="mma mma-bc1">
+
         <div class="row">
-            <h2 class="col-sm-12"><span></span>Output chart - Scrypt (Litecoin mining)</h2>
+        <div class="col-sm-5">
+        <div class="steps text-center">
+            <h3><i class="fa fa-link" aria-hidden="true"></i> STEP 2 </h3>
+            <p>follow the link below in- order to purchase the available coin into your mining account: <a href="https://buy.coingate.com">BUY.COINGATE.COM</a> <a href="https://bitcoin.com">BITCOIN.COM</a></p>
+         </div>
+         </div>
 
-            <div class="col-sm-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>Output in USD</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="pull-right panel-btns"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="hero-graph" id="hero-graph-scrypt"></div>
-                    </div>
-                </div>
+         <div class="col-sm-5">
+            <div class="steps text-center">
+                <h3><i class="fa fa-arrow-up" aria-hidden="true"></i> STEP 3 </h3>
+                <p>Input your Copied wallet address copied (STEP 1) In either of the platform above in (STEP 2) and also the amount according to the selected package.</p>
+             </div>
+         </div>
+
+         <div class="col-sm-5 offset-sm-2">
+             <div class="steps text-center">
+                <h3><i class="fa fa-money" aria-hidden="true"></i> STEP 4 </h3>
+                <p>Make payment through your Card/ Bank Transfer to complete your purchase. </p> 
+             </div>
+         </div>
+
+         </div>
+
+         <br>
+         <div class="container">
+             <h4><b>Note</b>: Purchase usually takes 10-60mins to reflect into your mining account.</h4>
+             <br><br>
+             <div class="alternative">
+                 <h4>ALTERNATIVE PAYMENT INCLUDES:</h4>
+                 <br>
+                 <ul>
+                     <li><b>CASHAPP(USA ONLY & BTC )</b>: Purchase your investment  from your CashApp according to the selected package. Then send directly into your mining account using the BTC ADDRESS above.
+                    </li>
+                     <li><b>PAYPAL: Tap to request payment details. Payment details would be sent via Email.</b></li>
+                 </ul>
+             </div>
+         </div>
+
+    </div>
+</div>
+
+ <div id="footer-container">
+    <footer class="container">
+      <div class="mma">
+        <p class="fpf">
+          <img src="../img/logo-black.png" alt="Cryptobitnet-logo" class="img-responsive" style="width: 60px;">
+  
+                          <p>Cryptobitnet Ltd., N/A 210 Midhraun 80 Garðabær Iceland</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal fade" id="ModalOutputTreshold" tabindex="-1" role="dialog" aria-labelledby="ModalOutputTresholdLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Default transaction threshold</h4>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    <li><b>Cryptocurrency</b>
+                        <span>Minimum transaction threshold</span></li>
+                    <li><b>BTC</b> <span>0.0025 (250 000 satoshi)</span></li>
+                    <li><b>BCH</b> <span>0.0015</span></li>
+                    <li><b>BTG</b> <span>0.01</span></li>
+                                                            <li><b>DOGE</b> <span>50</span></li>
+                    <li><b>DASH</b> <span>0.001</span></li>
+                    <li><b>ETH</b> <span>0.04</span></li>
+                    <li><b>ETC</b> <span>0.15</span></li>
+                    <li><b>REP</b> <span>0.1</span></li>
+                    <li><b>LTC</b> <span>0.002</span></li>
+                                        <li><b>XMR</b> <span>0.4</span></li>
+                    <li><b>XMC</b> <span>4</span></li>
+                    <li><b>ZEC</b> <span>0.001</span></li>
+                                        <li><b>ETN</b> <span>100</span></li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
-    <div id="my-earnings-x11" class="mma mma-bc1">
-        <div class="row">
-            <h2 class="col-sm-12"><span></span>Output chart - X11 (Dash mining)</h2>
+</div>
 
-            <div class="col-sm-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>Output in USD</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="pull-right panel-btns"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="hero-graph" id="hero-graph-x11"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+<div id="mpo"></div>
+<div id="the-loader">
+    <div class="loader-content">
+        <p>Your request is being processed. Please wait.</p>
+                <div class="progress-line"></div>
     </div>
-    <div id="my-earnings-dagger-hashimoto" class="mma mma-bc1">
-        <div class="row">
-            <h2 class="col-sm-12"><span></span>Output chart - Ethash (Ether mining)</h2>
+</div>
 
-            <div class="col-sm-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>Output in USD</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="pull-right panel-btns"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="hero-graph" id="hero-graph-dagger-hashimoto"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="my-earnings-equihash" class="mma mma-bc1">
-        <div class="row">
-            <h2 class="col-sm-12"><span></span>Output chart - Equihash (Zcash mining)</h2>
-
-            <div class="col-sm-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>Output in USD</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="pull-right panel-btns"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="hero-graph" id="hero-graph-equihash"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="my-earnings-cryptonight" class="mma mma-bc1">
-        <div class="row">
-            <h2 class="col-sm-12"><span></span>Output chart - Cryptonight (Monero mining)</h2>
-
-            <div class="col-sm-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <p>Output in USD</p>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="pull-right panel-btns"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel-body">
-                        <div class="hero-graph" id="hero-graph-cryptonight"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div style="display:none;">
-        <div id="algos-view" data-value='{"sha256":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_2year":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_1year":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_12month":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_9month":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_075year":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_18month":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_150year":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_18month015":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_18month003":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_18month00":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_21monthClassic":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_2year006":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_2year003":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_2year00":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_30month003":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_30month00":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_6month006":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_6month003":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"sha256_6month00":{"name":"sha256","nname":"Bitcoin","description":"Pure Bitcoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Bitcoin mining"},"equihash":{"name":"equihash","nname":"Zcash","description":"Pure Zcash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Zcash mining"},"scrypt":{"name":"Scrypt","nname":"Litecoin","description":"Pure Litecoin mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Litecoin mining"},"x11":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_1year00001":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_1year0000015":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_2year0000015":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_15monthClassic":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_1year0f":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_2year000005":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_1year000005":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_2year00":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"x11_1year00":{"name":"X11","nname":"Dash","description":"Pure Dash mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Dash mining"},"dagger-hashimoto":{"name":"dagger-hashimoto","nname":"Ethash","description":"Pure Ether mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Ether mining"},"dagger-hashimoto_3month00":{"name":"dagger-hashimoto","nname":"Ethash","description":"Pure Ether mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Ether mining"},"dagger-hashimoto_12month00":{"name":"dagger-hashimoto","nname":"Ethash","description":"Pure Ether mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Ether mining"},"dagger-hashimoto_24month00":{"name":"dagger-hashimoto","nname":"Ethash","description":"Pure Ether mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Ether mining"},"cryptonight":{"name":"Monero","nname":"Monero","description":"Monero mining","active":1,"active_admin":1,"out_of_stock":1,"nice_name":"Monero mining"}}'></div>
-        <div id="algos-chart-data" data-value=''></div>
-        <div id="algos-chart-data-all" data-value='{"sha256":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_2year":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_1year":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_12month":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_9month":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_075year":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_18month":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_150year":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_18month015":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_18month003":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_18month00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_21monthClassic":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_2year006":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_2year003":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_2year00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_30month003":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_30month00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_6month006":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_6month003":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"sha256_6month00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"equihash":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"scrypt":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_1year00001":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_1year0000015":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_2year0000015":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_15monthClassic":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_1year0f":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_2year000005":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_1year000005":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_2year00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"x11_1year00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"dagger-hashimoto":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"dagger-hashimoto_3month00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"dagger-hashimoto_12month00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"dagger-hashimoto_24month00":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}],"cryptonight":[{"period":"2020-11-21","hash":0},{"period":"2020-11-22","hash":0},{"period":"2020-11-23","hash":0},{"period":"2020-11-24","hash":0},{"period":"2020-11-25","hash":0},{"period":"2020-11-26","hash":0},{"period":"2020-11-27","hash":0},{"period":"2020-11-28","hash":0},{"period":"2020-11-29","hash":0},{"period":"2020-11-30","hash":0},{"period":"2020-12-01","hash":0},{"period":"2020-12-02","hash":0},{"period":"2020-12-03","hash":0},{"period":"2020-12-04","hash":0},{"period":"2020-12-05","hash":0},{"period":"2020-12-06","hash":0},{"period":"2020-12-07","hash":0},{"period":"2020-12-08","hash":0},{"period":"2020-12-09","hash":0},{"period":"2020-12-10","hash":0},{"period":"2020-12-11","hash":0},{"period":"2020-12-12","hash":0},{"period":"2020-12-13","hash":0},{"period":"2020-12-14","hash":0},{"period":"2020-12-15","hash":0},{"period":"2020-12-16","hash":0},{"period":"2020-12-17","hash":0},{"period":"2020-12-18","hash":0},{"period":"2020-12-19","hash":0}]}'></div>
-        <div id="algos-req-ip" data-value='"197.210.8.238"'></div>
-    </div>
-
-
-        </div>
-    </div>
-
-        <div id="footer-container">
-      <footer class="container">
-        <div class="mma">
-          <p class="fpf">
-            <img src="../img/logo-black.png" alt="Cryptobitnet-logo" class="img-responsive" style="width: 60px;">
-
-                            <p>Cryptobitnet Ltd., N/A 210 Midhraun 80 Garðabær Iceland</p>
-        </div>
-      </footer>
-    </div>
-
-    <div class="modal fade" id="ModalOutputTreshold" tabindex="-1" role="dialog" aria-labelledby="ModalOutputTresholdLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Default transaction threshold</h4>
-                </div>
-                <div class="modal-body">
-                    <ul>
-                        <li><b>Cryptocurrency</b>
-                            <span>Minimum transaction threshold</span></li>
-                        <li><b>BTC</b> <span>0.0025 (250 000 satoshi)</span></li>
-                        <li><b>BCH</b> <span>0.0015</span></li>
-                        <li><b>BTG</b> <span>0.01</span></li>
-                                                                <li><b>DOGE</b> <span>50</span></li>
-                        <li><b>DASH</b> <span>0.001</span></li>
-                        <li><b>ETH</b> <span>0.04</span></li>
-                        <li><b>ETC</b> <span>0.15</span></li>
-                        <li><b>REP</b> <span>0.1</span></li>
-                        <li><b>LTC</b> <span>0.002</span></li>
-                                            <li><b>XMR</b> <span>0.4</span></li>
-                        <li><b>XMC</b> <span>4</span></li>
-                        <li><b>ZEC</b> <span>0.001</span></li>
-                                            <li><b>ETN</b> <span>100</span></li>
-                    </ul>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-    <div id="mpo"></div>
-    <div id="the-loader">
-        <div class="loader-content">
-            <p>Your request is being processed. Please wait.</p>
-                    <div class="progress-line"></div>
-        </div>
-    </div>
-
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('.hp ul a').click(function() {
-          var sel = $(this).attr('data-option');
-          if (sel == '-') {
-            $('.hp-val').val('');
-            $('.hp-holder').show();
-
-          } else {
-            $('.hp-val').val(sel);
-            $('.hp-holder').hide();
-          }
-        });
-
-        $('h5').popover();
-
-      });
-    </script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-      localStorage.removeItem('__GenesisJWT');
-      localStorage.setItem('__GenesisJWT', "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmZGM5MDBiYWZhMjBlZDA0ZDhiNDU2NyIsImVtYWlsIjoib3JpenVkYXZpZGNoaWJ1ZXplQGdtYWlsLmNvbSIsImRvbWFpbiI6ImdlbmVzaXMtbWluaW5nLmNvbSJ9.-0-a4Xor_1fz3rzmBXNqrdlPQYzQ17-1FjIkBToPesE");
+  $(document).ready(function() {
+    $('.hp ul a').click(function() {
+      var sel = $(this).attr('data-option');
+      if (sel == '-') {
+        $('.hp-val').val('');
+        $('.hp-holder').show();
+
+      } else {
+        $('.hp-val').val(sel);
+        $('.hp-holder').hide();
+      }
     });
-  </script>
-  <script type="text/javascript">
-    /* <![CDATA[ */
-    var google_conversion_id = 862121629;
-    var google_custom_params = window.google_tag_params;
-    var google_remarketing_only = true;
-    var google_conversion_format = 3;
-    /* ]]> */
-  </script>
+
+    $('h5').popover();
+
+  });
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  localStorage.removeItem('__GenesisJWT');
+  localStorage.setItem('__GenesisJWT', "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjVmZGM5MDBiYWZhMjBlZDA0ZDhiNDU2NyIsImVtYWlsIjoib3JpenVkYXZpZGNoaWJ1ZXplQGdtYWlsLmNvbSIsImRvbWFpbiI6ImdlbmVzaXMtbWluaW5nLmNvbSJ9.-0-a4Xor_1fz3rzmBXNqrdlPQYzQ17-1FjIkBToPesE");
+});
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 862121629;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+var google_conversion_format = 3;
+/* ]]> */
+</script>
+
+
+ <style>
+
+     .steps {
+         background-color: #e69500;
+         color: white !important;
+         width: 400px;
+         float: center;
+         margin-left: 60px;
+         padding: 15px;
+         margin-bottom: 20px;
+     }
+
+     .steps h3 {
+         color: white !important;
+     }
+
+     .steps p {
+         color: white !important;
+         font-size: 17px;
+         margin-top: 10px;
+     }
+
+     .steps a {
+         color: white !important;
+     }
+
+     .steps a:hover {
+         color: black !important;
+     }
+
+     .logo-background {
+        background-color: #274c65;
+        height: 200px;
+        margin-bottom: 30px;
+        position: relative;
+     }
+     .logo-background img {
+         margin-left: 110px;
+         padding-top: 40px;
+     }
+     .logo-background p {
+         font-size: 18px;
+         padding-top: 10px;
+     }
+
+     
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.logo-background:hover {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.logo-background:hover .middle {
+  opacity: 1;
+}
+
+.btn-request {
+    color: white !important;
+    border-radius: 0px !important;
+    background-color: #ffab32 !important;
+    font-size: 17px !important;
+}
+
+@media (max-width: 750px) {
+    .btn-request {
+        margin-top: -10px !important;
+    }
+}
+
+@media (max-width: 479px) {
+    .steps {
+        width: 300px !important;
+        margin-left : 0px !important;
+    }
+}
+
+.alternative ul {
+    list-style-type: square !important;
+}
+
+.alternative ul li {
+    margin-bottom: 10px;
+}
+ </style>
 
 </body>
 </html>
