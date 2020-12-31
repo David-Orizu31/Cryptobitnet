@@ -539,7 +539,17 @@
                     <h2>Login</h2>
                     <span>Please enter your login data</span>
         
-                    <form action="/login-panel" controller="users" id="UserLoginNowForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="data[_Token][key]" value="5a9bb6628a374a85cfeacc473c8d40e83047b1e6" id="Token1191440511"/></div><div class="form-group required"><input name="data[User][email]" class="form-control" placeholder="E-mail" type="text" id="UserEmail" required="required"/></div><div class="form-group required"><input name="data[User][password]" class="form-control" placeholder="Password" type="password" id="UserPassword" required="required"/></div>
+                    <form action="/login-panel" controller="users" id="UserLoginNowForm" method="post" accept-charset="utf-8">
+                        <div style="display:none;">
+                            <input type="hidden" name="_method" value="POST"/>
+                            <input type="hidden" name="data[_Token][key]" value="5a9bb6628a374a85cfeacc473c8d40e83047b1e6" id="Token1191440511"/>
+                        </div>
+                        <div class="form-group required">
+                            <input name="email" class="form-control" placeholder="E-mail" type="text" id="email" required="required"/>
+                        </div>
+                        <div class="form-group required">
+                            <input name="password" class="form-control" placeholder="Password" type="password" id="password" required="required"/>
+                        </div>
                     
                     <p class="text-center"><a href="/reset" class="text-warning">Lost your password?</a> |
                         <a href="sign-up.html" class="text-warning">Sign up</a></p>

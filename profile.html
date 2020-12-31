@@ -565,13 +565,13 @@
                         </div>
                         <input type="hidden" name="data[User][_source]" class="form-control" placeholder="" id="UserSource"/>
                         <div class="form-group required">
-                            <input name="data[User][Name]" class="form-control" placeholder="Full Name" type="text" id="UserName" required="required"/>
+                            <input name="name" class="form-control" placeholder="Full Name" type="text" id="name" required="required"/>
                         </div>
                         <div class="form-group required">
-                            <input name="data[User][Name]" class="form-control" placeholder="Username" type="text" id="UserName" required="required"/>
+                            <input name="name" class="form-control" placeholder="Username" type="text" id="name" required="required"/>
                         </div>
                         <div class="form-group required">
-                            <input name="data[User][Email]" class="form-control" placeholder="Email" type="text" id="UserEmail" required="required"/>
+                            <input name="email" class="form-control" placeholder="Email" type="text" id="email" required="required"/>
                         </div>
                         <div class="form-group">
                             <select class="form-control" name="package" id="package">
@@ -583,24 +583,24 @@
                               </select>
                         </div>
                         <div class="form-group">
-                            <input name="data[User][change_password]" class="form-control" placeholder="Password" type="password" id="UserChangePassword"/>
+                            <input name="password" class="form-control" placeholder="Password" type="password" id="password"/>
                             <div class="form-hint">Password must be at least 8 characters long.</div>
                         </div>
                         <div class="form-group required">
-                            <input name="data[User][repeat_password]" class="form-control" placeholder="Confirm password" type="password" id="UserRepeatPassword" required="required"/>
+                            <input name="password" class="form-control" placeholder="Confirm password" type="password" id="password" required="required"/>
                         </div>
                         <div class="form-group">
-                            <label for="file">Upload Photo</label>
-                      <input type="file" class="form-control-file" id="file">
+                            <label for="photo">Upload Photo</label>
+                      <input type="file" name="photo" class="form-control-file" id="photo">
                         </div>
                         <div class="form-group">
-                            <label for="file">Upload Document</label>
-                      <input type="file" class="form-control-file" id="file">
+                            <label for="document">Upload Document</label>
+                      <input type="file" name="document" class="form-control-file" id="document">
                         </div>
                         <hr>
                         <p><b>Note : Insert your current password if you changed yours</b></p>
                         <div class="form-group">
-                            <input name="data[User][current_password]" class="form-control" placeholder="Current password" type="password" id="UserCurrentPassword" required="required"/>
+                            <input name="password" class="form-control" placeholder="Current password" type="password" id="password" required="required"/>
                         </div>
                         <!-- <div class="form-group">
                             <label for="UserPrivacy" class="splash-check">

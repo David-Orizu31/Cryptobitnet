@@ -305,7 +305,7 @@
                                             <use xlink:href="/img/Version3/sprite_dash.svg#gm-icon-notification"></use>
                                         </svg> -->
                                          <i class="fa fa-bell gm-icon" aria-hidden="true" title="Messages" style="font-size: 20px; padding-top: 10px;"></i>
-                                        <span v-show="showNewMessagesDot" class="messages-new" ></span>
+                                         <span class='badge badge-warning' id='lblCartCount'> 0 </span>
                                     </a>
                                     <a class="nav-logout" href="/logout" title="Logout">
                                         <!-- <svg class="gm-icon gm-icon-logout"><title>Logout</title>
@@ -319,6 +319,29 @@
                     </div>
                 </div>
             </div>
+
+            <style>
+                .badge {
+    padding: 4px !important;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 50% !important;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605 !important;
+  }
+  #lblCartCount {
+      font-size: 12px !important;
+      background: #c67605;
+      color: white;
+      padding: 2 5px !important;
+      vertical-align: top !important;
+      margin-left: -15px !important; 
+    
+  }
+            </style>
 
                     <div class="side-notification-overlay">
               <div class="side-notification">
@@ -690,6 +713,10 @@
     </div> -->
     <!-- button boxes -->
 
+
+   
+
+
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card" style="padding-top: 20px; padding-bottom: 20px;">
           <div class="p-4 pr-5 border-bottom bg-light d-flex justify-content-between">
@@ -824,7 +851,11 @@ new TradingView.widget(
         </div>
     </div>
 
-    <div class="container">
+
+    
+
+<script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-3" lcw-base="USD" lcw-d-head="true" lcw-d-name="true" lcw-d-code="true" lcw-d-icon="true" lcw-color-tx="#ffffff" lcw-color-bg="#1f2434" lcw-border-w="1" style="justify-content: center !important; align-items: center !important;" ></div>
+    <!-- <div class="container">
         <h3 style="padding: 20px;">Crytocurrency live update</h3>
     <div id="tvc_container_a1dc7c002bdf809f1284cb61e2b06953" class="tvChartContainer"  style="width: 970px; height: 800px;">
         <div id="tvc_overlay_a1dc7c002bdf809f1284cb61e2b06953">
@@ -859,7 +890,7 @@ new TradingView.widget(
             height: 500px !important;
         }
     }
-</style>
+</style> -->
     <!-- <div id="my-earnings-equihash" class="mma mma-bc1">
         <div class="row">
             <h2 class="col-sm-12"><span></span>Output chart - Equihash (Zcash mining)</h2>
@@ -1019,6 +1050,7 @@ new TradingView.widget(
   <script>
     AOS.init();
   </script>
+
 
 </body>
 </html>

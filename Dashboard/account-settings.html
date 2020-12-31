@@ -305,7 +305,8 @@
                                             <use xlink:href="/img/Version3/sprite_dash.svg#gm-icon-notification"></use>
                                         </svg> -->
                                         <i class="fa fa-bell gm-icon" aria-hidden="true" title="Messages" style="font-size: 20px; padding-top: 10px;"></i>
-                                        <span v-show="showNewMessagesDot" class="messages-new"></span>
+                                        <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+                                        <!-- <span v-show="showNewMessagesDot" class="messages-new"></span> -->
                                     </a>
                                     <a class="nav-logout" href="/logout" title="Logout">
                                         <!-- <svg class="gm-icon gm-icon-logout"><title>Logout</title>
@@ -319,6 +320,29 @@
                     </div>
                 </div>
             </div>
+
+            <style>
+                .badge {
+    padding: 4px !important;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 50% !important;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605 !important;
+  }
+  #lblCartCount {
+      font-size: 12px !important;
+      background: #c67605;
+      color: white;
+      padding: 2 5px !important;
+      vertical-align: top !important;
+      margin-left: -15px !important; 
+    
+  }
+            </style>
     
                     <div class="side-notification-overlay">
               <div class="side-notification">

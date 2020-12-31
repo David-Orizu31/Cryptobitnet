@@ -305,7 +305,8 @@
                                             <use xlink:href="/img/Version3/sprite_dash.svg#gm-icon-notification"></use>
                                         </svg> -->
                                         <i class="fa fa-bell gm-icon" aria-hidden="true" title="Messages" style="font-size: 20px; padding-top: 10px;"></i>
-                                        <span v-show="showNewMessagesDot" class="messages-new"></span>
+                                        <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+                                        <!-- <span v-show="showNewMessagesDot" class="messages-new"></span> -->
                                     </a>
                                     <a class="nav-logout" href="/logout" title="Logout">
                                          <!-- <svg class="gm-icon gm-icon-logout"><title>Logout</title>
@@ -319,6 +320,29 @@
                     </div>
                 </div>
             </div>
+
+            <style>
+                .badge {
+    padding: 4px !important;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 50% !important;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605 !important;
+  }
+  #lblCartCount {
+      font-size: 12px !important;
+      background: #c67605;
+      color: white;
+      padding: 2 5px !important;
+      vertical-align: top !important;
+      margin-left: -15px !important; 
+    
+  }
+            </style>
     
                     <div class="side-notification-overlay">
               <div class="side-notification">
@@ -533,13 +557,13 @@
         <p>Input your wallet address below ( Do not input the same wallet address used to deposit into your mining wallet). Don’t have one click here <a href="https://exodus.io"><b>exodus.io</b></a></p>
         </div>
 
-        <form>
+        <form name="contact_form" onsubmit="validate_form ();" method="post">
             <div class="container">
             <div class="row">
             <div class="col-sm-6">
             <div class="form-group">
                 <label for="withdrawn-cash">Amount</label>
-                <input type="text" class="form-control" id="withdrawn-cash" placeholder="Enter your Amount" style="width: 250px;">
+                <input type="number" class="form-control" id="withdrawn-cash" name="withdrawn-cash" placeholder="Enter your Amount" style="width: 250px;">
             </div>
         </div>
             <div class="col-sm-6">
@@ -552,12 +576,43 @@
             
             
             <div class="form-group">
-                <button class="btn btn-withdraw" type="submit">Withdraw</button>
+                <button class="btn btn-withdraw" type="submit" onsubmit="validate_form();">Withdraw</button>
             </div>
         </div>
         </form>
 
-        <script></script>
+        <script type="text/javascript">
+            
+            function validate_Form() {
+                var x;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("withdrawn-cash").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x > 1000) {
+    alert("Withdrawal declined");
+  } else {
+    alert("Withdrawal successful");
+  }
+         }
+            
+            </script>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            $('#button').click(function(){
+  
+  if($('#wallet-address').is(':<= 100000')) {
+		alert("withdrawal successful"); 
+	}
+  
+	else {
+		alert('Opps Insufficient balance, Withdrawal declined');
+	}
+  
+});
+        </script> -->
 
         <style>
         @media (max-width: 480px) {

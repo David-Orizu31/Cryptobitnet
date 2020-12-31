@@ -561,17 +561,17 @@
                     <form action="/signup" autocomplete="off" id="UserRegisterForm" method="post" accept-charset="utf-8">
                         <div style="display:none;">
                             <input type="hidden" name="_method" value="POST"/>
-                            <input type="hidden" name="data[_Token][key]" value="9e54606b8d5d552a07c0251b42353bdbe6388127" id="Token62768347"/>
+                            <input type="hidden" name="_Token[key]" value="9e54606b8d5d552a07c0251b42353bdbe6388127" id="Token62768347"/>
                         </div>
-                        <input type="hidden" name="data[User][_source]" class="form-control" placeholder="" id="UserSource"/>
+                        <input type="hidden" name="_source" class="form-control" placeholder="" id="_source"/>
                         <div class="form-group required">
-                            <input name="data[User][Name]" class="form-control" placeholder="Full Name" type="text" id="UserName" required="required"/>
-                        </div>
-                        <div class="form-group required">
-                            <input name="data[User][Name]" class="form-control" placeholder="Username" type="text" id="UserName" required="required"/>
+                            <input name="name" class="form-control" placeholder="Full Name" type="text" id="name" required="required"/>
                         </div>
                         <div class="form-group required">
-                            <input name="data[User][Email]" class="form-control" placeholder="Email" type="text" id="UserEmail" required="required"/>
+                            <input name="name" class="form-control" placeholder="Username" type="text" id="name" required="required"/>
+                        </div>
+                        <div class="form-group required">
+                            <input name="email" class="form-control" placeholder="Email" type="text" id="email" required="required"/>
                         </div>
                         <div class="form-group">
                             <select class="form-control" name="package" id="package">
@@ -583,11 +583,11 @@
                               </select>
                         </div>
                         <div class="form-group">
-                            <input name="data[User][change_password]" class="form-control" placeholder="Password" type="password" id="UserChangePassword"/>
+                            <input name="password" class="form-control" placeholder="Password" type="password" id="password"/>
                             <div class="form-hint">Password must be at least 8 characters long.</div>
                         </div>
                         <div class="form-group required">
-                            <input name="data[User][repeat_password]" class="form-control" placeholder="Confirm password" type="password" id="UserRepeatPassword" required="required"/>
+                            <input name="password" class="form-control" placeholder="Confirm password" type="password" id="password" required="required"/>
                         </div>
                         <div class="form-group">
                             <label for="UserPrivacy" class="splash-check">
@@ -598,9 +598,9 @@
                             </label>
                         </div>
                         <div class="form-group">
-                            <label for="UserNewsletter" class="splash-check">
-                                <input type="hidden" name="data[User][newsletter]" id="UserNewsletter_" value="0"/>
-                                <input type="checkbox" name="data[User][newsletter]"  value="1" id="UserNewsletter"/>
+                            <label for="Newsletter" class="splash-check">
+                                <input type="hidden" name="newsletter" id="Newsletter_" value="0"/>
+                                <input type="checkbox" name="newsletter"  value="1" id="Newsletter"/>
                                 <span class="checkb">&nbsp;</span><strong>I would like to receive occasional e-mails with discounts and offers</strong>
                             </label>
                         </div>        

@@ -305,7 +305,8 @@
                                             <use xlink:href="/img/Version3/sprite_dash.svg#gm-icon-notification"></use>
                                         </svg> -->
                                         <i class="fa fa-bell gm-icon" aria-hidden="true" title="Messages" style="font-size: 20px; padding-top: 10px;"></i>
-                                        <span v-show="showNewMessagesDot" class="messages-new"></span>
+                                        <span class='badge badge-warning' id='lblCartCount'> 0 </span>
+                                        <!-- <span v-show="showNewMessagesDot" class="messages-new"></span> -->
                                     </a>
                                     <a class="nav-logout" href="/logout" title="Logout">
                                          <!-- <svg class="gm-icon gm-icon-logout"><title>Logout</title>
@@ -319,6 +320,29 @@
                     </div>
                 </div>
             </div>
+
+            <style>
+                .badge {
+    padding: 4px !important;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 50% !important;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605 !important;
+  }
+  #lblCartCount {
+      font-size: 12px !important;
+      background: #c67605;
+      color: white;
+      padding: 2 5px !important;
+      vertical-align: top !important;
+      margin-left: -15px !important; 
+    
+  }
+            </style>
     
                     <div class="side-notification-overlay">
               <div class="side-notification">
@@ -578,15 +602,20 @@
                 <div class="form-group col-sm-12">
                     <input name="data[Page][phone]" class="form-control form-tel" placeholder="Your phone number" id="PhoneNumber" type="tel"/>                </div>
 
-                <div class="form-group form-group-select col-sm-12">                    <select name="data[Page][support_topic][1]" class="form-control selectpicker cs-selection" data-style="" data-size="10" data-dropup-auto="false" title="Select your service topic 1" data-header="Select your service topic 1" data-order="1" id="SupportTopic1" required="required">
+                <div class="form-group form-group-select col-sm-12">      
+                                 <select name="support-topic1" class="form-control selectpicker" required="required">
+<option value="select_your_service_topic" selected>Select your Service topic</option>
 <option value="my_account">My account</option>
-<!-- <option value="order_purchase">Order purchase</option> -->
+ <!-- <option value="order_purchase">Order purchase</option> -->
 <option value="output">Mining output</option>
-<!-- <option value="allocation">Mining allocation</option> -->
-<option value="affiliate">Affiliate program</option>
+ <!-- <option value="allocation">Mining allocation</option>
+ <option value="affiliate">Affiliate program</option>  -->
 <option value="general">General</option>
-</select>                </div>
+</select>                 
 
+
+</div>
+ 
                 <div class="form-group form-group-select col-sm-12" style="display:none">                    <select name="data[Page][support_topic][2]" class="form-control selectpicker cs-selection" data-style="" data-size="10" data-dropup-auto="false" title="Select your service topic 2" data-header="Select your service topic 2" data-order="2" id="SupportTopic2">
 </select>                </div>
 
@@ -678,7 +707,7 @@
 </div>
 
 
-<link type="text/css" rel="stylesheet" href="../css/bootstrap-select-front.min.css"/>
+<link type="text/css" rel="stylesheet" href="../css/bootstrap-select-form.min.css"/>
 <link type="text/css" rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css"/>
 
 <script type="text/javascript" src="../js/bootstrap-select-front.min.js"></script>
