@@ -723,9 +723,15 @@
                     <input type="text" class="form-control" id="myInput" name="id" value="39">
                 </div>
                 <div class="col-md-3">
-                    <button type="button" class="btn btn-success" onclick="myFunction()">
+                    <button type="button" class="btn btn-success butid" onclick="myFunction()">
                          Copy ID</button>
                 </div>
+
+                <style>
+                    .butid {
+                        border: 1px solid black !important;
+                    }
+                </style>
                 </div>
                  </div>
           </form>
@@ -780,45 +786,7 @@
 }
     </script>
 
-<style>
-.tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 140px;
-    background-color: #555 !important;
-    color: #fff !important;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -75px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent !important;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
-  </style>
+
 
   <!-- <script>
       $('#myModal').on('shown.bs.modal', function () {
@@ -970,6 +938,14 @@ var google_conversion_format = 3;
          margin-left: 110px;
          padding-top: 40px;
      }
+
+
+     @media (max-width: 480px) {
+        .logo-background img {
+            margin-left: 90px !important;
+        } 
+     }
+
      .logo-background p {
          font-size: 18px;
          padding-top: 10px;
