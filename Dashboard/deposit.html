@@ -569,7 +569,7 @@
                         <img src="img/bitcoin-logo (1).png" alt="bitcoin-logo" class="img-responsive image" style="width: 70px;">
                         <p style="color: white;">BITCOIN</p>
                         <div class="middle">
-                            <button class="btn btn-request">Request</button>
+                            <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal">Request</button>
                         </div>
                    </div>
                </div>
@@ -578,7 +578,7 @@
                     <img src="img/ethereum-trans.jpg" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
                     <p style="color: white;">ETHEREUM</p>
                     <div class="middle">
-                        <button class="btn btn-request">Request</button>
+                        <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal">Request</button>
                     </div>
                </div>
                </div>
@@ -587,7 +587,7 @@
                     <img src="img/stellar-logo.png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
                     <p style="color: white;">STELLAR</p>
                     <div class="middle">
-                        <button class="btn btn-request">Request</button>
+                        <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal-2">Request</button>
                     </div>
                </div>
                </div>
@@ -596,7 +596,7 @@
                     <img src="img/dogecoin-2.png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
                     <p style="color: white;">DOGECOIN</p>
                     <div class="middle">
-                        <button class="btn btn-request">Request</button>
+                        <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal-2">Request</button>
                     </div>
                </div>
                </div>
@@ -605,7 +605,7 @@
                     <img src="img/litecoin.png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
                     <p style="color: white;">LITECOIN</p>
                     <div class="middle">
-                        <button class="btn btn-request">Request</button>
+                        <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal-2">Request</button>
                     </div>
                </div>
                </div>
@@ -658,7 +658,7 @@
                          <img src="img/paypal-logo.png" alt="bitcoin-logo" class="img-responsive image" id="paypal" style="width: 150px;">
                          <p style="color: white; margin-top: -20px !important; font-size: 17px; padding: 20px;" class="pay-cashapp">Tap to request payment details. Payment details would be sent via Email.</p>
                          <div class="middle">
-                             <button class="btn btn-request">Request</button>
+                             <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal">Request</button>
                          </div>
                     </div>
                 </div>
@@ -694,6 +694,142 @@
 </div>
 
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Our Account Details</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+                  <div class="form-group">
+                     <label for="account-name">Account Name</label>
+                     <input type="text" class="form-control" id="account-name" name="account-name" value="Cryptobitnet Limited">
+                  </div>
+                  <div class="form-group">
+                    <label for="account-number">Account Number</label>
+                    <input type="text" class="form-control" id="account-number" name="account-number" value="456628921">
+                 </div>
+                 <div class="form-group">
+                    <label for="myInput">Your ID (Please Copy)</label>
+                    <div class="row">
+                     <div class="col-md-8" style="padding-left: 30px !important;">
+                    <input type="text" class="form-control" id="myInput" name="id" value="39">
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-success" onclick="myFunction()">
+                         Copy ID</button>
+                </div>
+                </div>
+                 </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal for stellar and other coins -->
+  <div class="modal fade" id="exampleModal-2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLabel">Our Account Details</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+                  <div class="form-group">
+                     <label for="account-name">Account Name</label>
+                     <input type="text" class="form-control" id="account-name" name="account-name" value="Cryptobitnet Limited">
+                  </div>
+                  <div class="form-group">
+                    <label for="account-number">Account Number</label>
+                    <input type="text" class="form-control" id="account-number" name="account-number" value="456628921">
+                 </div>
+                 
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied id: " + copyText.value);
+}
+    </script>
+
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555 !important;
+    color: #fff !important;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent !important;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  </style>
+
+  <!-- <script>
+      $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+  </script> -->
+
+  <script src="../bootstrap/js/jquery.min.js"></script>
+
+<script src="../bootstrap/js/bootstrap-3.3.7.min.js"></script>
+
 
  <div id="footer-container">
     <footer class="container">
