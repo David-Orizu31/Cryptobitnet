@@ -17,12 +17,13 @@
     <link rel="stylesheet" href="css/style_dash_1.min.css">
     <link rel="stylesheet" href="css/custom.css">
 
-    <script src="js/jquery-2.1.2.min.js"></script>
+    <!-- <script src="js/jquery-2.1.2.min.js"></script> -->
     <script src="../bootstrap/js/bootstrap.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/rapheal.min.js"></script>
     <script src="js/morris.js"></script>
     <script src="js/dashboard.js"></script>
+    
     <!-- <script src="js/bootstrap-select.min.js"></script> -->
     <script type="text/javascript" src="../js/svg4everybody.min.js"></script>
     <script type="text/javascript">svg4everybody();</script>
@@ -602,15 +603,27 @@
                 <div class="form-group col-sm-12">
                     <input name="data[Page][phone]" class="form-control form-tel" placeholder="Your phone number" id="PhoneNumber" type="tel"/>                </div>
 
-                <div class="form-group form-group-select col-sm-12">      
-                                 <select name="support-topic1" class="form-control selectpicker" data-style="" data-size="10" data-dropup-auto="false" title="Select your service topic 1" data-header="Select your service topic 1" data-order="1" id="SupportTopic1" required="required">
+                <div class="form-group col-sm-12">     
+                                 <select name="support-topic1" class="form-control selectpicker" title="Select your service topic 1" id="SupportTopic1" required="required">
+<option value="Select your service topic 1" selected disabled>Select your service topic 1</option>                                     
 <option value="my_account">My account</option>
  <!-- <option value="order_purchase">Order purchase</option> -->
 <option value="output">Mining output</option>
  <!-- <option value="allocation">Mining allocation</option>
  <option value="affiliate">Affiliate program</option>  -->
 <option value="general">General</option>
-</select>                 
+</select> 
+
+
+<!-- <script src="js/jquery-1.11.1.js"></script>
+<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css" />
+
+<script src="js/bootstrap-multiselect.min.js"></script>
+<script>
+    $(document).ready(function() {
+  $('#SupportTopic1').multiselect();
+});
+</script> -->
 
 
 </div>
@@ -706,10 +719,10 @@
 </div>
 
 
-<link type="text/css" rel="stylesheet" href="../css/bootstrap-select-form.min.css"/>
+<!-- <link type="text/css" rel="stylesheet" href="../css/bootstrap-select-form.min.css"/> -->
 <link type="text/css" rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css"/>
 
-<script type="text/javascript" src="../js/bootstrap-select-front.min.js"></script>
+<!-- <script type="text/javascript" src="../js/bootstrap-select-front.min.js"></script> -->
 <script type="text/javascript" src="../js/moment.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap-datetimepicker.min.js"></script>
 
