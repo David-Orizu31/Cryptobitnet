@@ -597,12 +597,12 @@
         <div class="tab-content" id="settings-tab-content">
             <div class="tab-pane fade in active" id="general">
                 <form action="/my-account" id="generalForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="data[_Token][key]" value="0b343555e102e47e4bdc128f103d65964dc69a74" id="Token1592092397"/></div><input type="hidden" name="data[User][id]" class="form-control" value="5fdc900bafa20ed04d8b4567" id="UserId"/>                <div class="col-sm-6"><div class="form-group required"><label for="UserEmail">Email</label><input name="data[User][email]" class="form-control" placeholder="Email" disabled="disabled" type="text" value="orizudavidchibueze@gmail.com" id="UserEmail"/></div></div>
-                <div class="col-sm-6"><div class="form-group"><label for="UserBackupEmail">Backup Email</label><input name="data[User][backup_email]" class="form-control" placeholder="Backup Email" type="text" value="" id="UserBackupEmail"/></div></div>
-                <div class="col-sm-6"><div class="form-group"><label for="UserFirstName">First Name</label><input name="data[User][first_name]" class="form-control" placeholder="First Name" type="text" id="UserFirstName"/></div></div>
-                <div class="col-sm-6"><div class="form-group"><label for="UserLastName">Last Name</label><input name="data[User][last_name]" class="form-control" placeholder="Last Name" type="text" id="UserLastName"/></div></div>
+                <div class="col-sm-6"><div class="form-group"><label for="UserBackupEmail">Backup Email</label><input name="email" class="form-control" placeholder="Backup Email" type="text" value="" id="UserBackupEmail"/></div></div>
+                <div class="col-sm-6"><div class="form-group"><label for="UserFirstName">First Name</label><input name="name" class="form-control" placeholder="First Name" type="text" id="UserFirstName"/></div></div>
+                <div class="col-sm-6"><div class="form-group"><label for="UserLastName">Last Name</label><input name="name" class="form-control" placeholder="Last Name" type="text" id="UserLastName"/></div></div>
                 <div class="col-sm-12 col-lg-6">
                     <div class="dob">
-                        <div class="form-group"><label for="UserDateOfBirthDay">Date Of Birth</label><select name="data[User][dateOfBirth][day]" class="selectpicker form-control" data-size="13" id="UserDateOfBirthDay">
+                        <div class="form-group"><label for="UserDateOfBirthDay">Date Of Birth</label><select name="day_of_birth" class="selectpicker form-control" data-size="13" id="UserDateOfBirthDay">
 <option value="0">Select Day Of Birth</option>
 <option value="1">1</option>
 <option value="2">2</option>
@@ -635,7 +635,7 @@
 <option value="29">29</option>
 <option value="30">30</option>
 <option value="31">31</option>
-</select></div>                        <div class="form-group"><label for="UserDateOfBirthMonth">Date Of Birth</label><select name="data[User][dateOfBirth][month]" class="selectpicker form-control" data-size="13" id="UserDateOfBirthMonth">
+</select></div>                        <div class="form-group"><label for="UserDateOfBirthMonth">Date Of Birth</label><select name="month_of_birth" class="selectpicker form-control" data-size="13" id="UserDateOfBirthMonth">
 <option value="0">Select Month Of Birth</option>
 <option value="1">January</option>
 <option value="2">February</option>
@@ -649,7 +649,7 @@
 <option value="10">October</option>
 <option value="11">November</option>
 <option value="12">December</option>
-</select></div>                        <div class="form-group"><label for="UserDateOfBirthYear">Date Of Birth</label><select name="data[User][dateOfBirth][year]" class="selectpicker form-control" data-size="13" id="UserDateOfBirthYear">
+</select></div>                        <div class="form-group"><label for="UserDateOfBirthYear">Date Of Birth</label><select name="year_of_birth" class="selectpicker form-control" data-size="13" id="UserDateOfBirthYear">
 <option value="0">Select Year Of Birth</option>
 <option value="2007">2007</option>
 <option value="2006">2006</option>
@@ -741,10 +741,13 @@
 <option value="1920">1920</option>
 </select></div>                    </div>
                 </div>
-                <div class="col-sm-6"><div class="form-group"><label for="UserMobile">Mobile Phone</label><input name="data[User][mobile]" class="form-control" placeholder="Mobile Phone" type="text" id="UserMobile"/></div></div>
+                <div class="col-sm-6"><div class="form-group"><label for="UserMobile">Mobile Phone</label><input name="mobile" class="form-control" placeholder="Mobile Phone" type="text" id="UserMobile"/></div></div>
+
+                <div class="col-sm-6"><div class="form-group"><label for="wallet_address">Wallet Address</label><input name="wallet_address" class="form-control" placeholder="Wallet Address" type="text" id="wallet_address"/></div></div>
+
                 <div class="col-sm-6">
                     <div class="checkbox">
-                        <label><input type="hidden" name="data[User][newsletter]" id="UserNewsletter_" value="0"/><input type="checkbox" name="data[User][newsletter]"  class="checkbox-inline" value="1" id="UserNewsletter" checked="checked"/>Receive our Newsletter?</label>
+                        <label><input type="hidden" name="newsletter" id="UserNewsletter_" value="0"/><input type="checkbox" name="newsletter"  class="checkbox-inline" value="1" id="UserNewsletter" checked="checked"/>Receive our Newsletter?</label>
                     </div>
                 </div>
                 <input type="hidden" name="data[User][form_type]" value="generalForm" id="UserFormType"/><div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="e89f101581ff41fe4593a56ab96b7a6f5d46ba20%3AUser.id" id="TokenFields1525775260"/><input type="hidden" name="data[_Token][unlocked]" value="User.form_type%7Cg-recaptcha-response" id="TokenUnlocked546290986"/></div></form>            </div>
