@@ -23,6 +23,7 @@
     <script src="js/rapheal.min.js"></script>
     <script src="js/morris.js"></script>
     <script src="js/dashboard.js"></script>
+   
     <script src="js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="../js/svg4everybody.min.js"></script>
     <script type="text/javascript">svg4everybody();</script>
@@ -557,13 +558,13 @@
         <p>Input your wallet address below ( Do not input the same wallet address used to deposit into your mining wallet). Don’t have one click here <a href="https://exodus.io"><b>exodus.io</b></a></p>
         </div>
 
-        <form name="contact_form" onsubmit="validate_form ();" method="post">
+        <form name="contact_form">
             <div class="container">
             <div class="row">
             <div class="col-sm-6">
             <div class="form-group">
                 <label for="withdrawn-cash">Amount</label>
-                <input type="number" class="form-control" id="withdrawn-cash" name="withdrawn-cash" placeholder="Enter your Amount" style="width: 250px;">
+                <input type="text" class="form-control" id="withdrawn_cash" name="withdrawn-cash" placeholder="Enter your Amount" style="width: 250px;">
             </div>
         </div>
             <div class="col-sm-6">
@@ -576,26 +577,40 @@
             
             
             <div class="form-group">
-                <button class="btn btn-withdraw" type="submit" onsubmit="validate_form();">Withdraw</button>
+                <button class="btn btn-withdraw" type="submit">Withdraw</button>
             </div>
         </div>
         </form>
 
+
+        <script src="js/sweet-alert.js"></script>
         <script type="text/javascript">
             
-            function validate_Form() {
-                var x;
+//             function validate_Form() {
+//                 var x;
 
-  // Get the value of the input field with id="numb"
-  x = document.getElementById("withdrawn-cash").value;
+  
+//   x = document.getElementById("withdrawn-cash").value;
 
-  // If x is Not a Number or less than one or greater than 10
-  if (isNaN(x) || x > 1000) {
-    alert("Withdrawal declined");
-  } else {
-    alert("Withdrawal successful");
-  }
-         }
+ 
+//   if (isNaN(x) || x > 1000) {
+//     alert("Withdrawal declined");
+//   } else {
+//     alert("Withdrawal successful");
+//   }
+//          }
+
+document.getElementById("withdrawn_cash").onkeyup = function() {
+  var input = parseInt(this.value);
+  if (input < 0 || input > 100)
+  Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Insufficient balance please try again',
+  
+})
+  return;
+}
             
             </script>
 
