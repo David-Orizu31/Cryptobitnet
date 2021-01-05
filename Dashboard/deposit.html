@@ -715,14 +715,14 @@
         <div class="modal-body">
           <form action="">
                  <div class="form-group">
-                    <label for="myInput">Your ID (Please Copy)</label>
+                    <label for="myInput">Your Wallet Address (Please Copy)</label>
                     <div class="row">
                      <div class="col-md-8" style="padding-left: 30px !important;">
                     <input type="text" class="form-control" id="myInput" name="id" value="39">
                 </div>
                 <div class="col-md-3 text-center copy-id">
                     <button type="button" class="btn btn-success butid" onclick="copied()">
-                         Copy ID</button>
+                         Copy Address</button>
                 </div>
 
                 <style>
@@ -761,7 +761,7 @@
 Swal.fire({
                 icon: 'success',
                 title: 'Success',
-                text: "Copied id: " + copyText.value,
+                text: "Copied address: " + copyText.value,
   
             });
 }
