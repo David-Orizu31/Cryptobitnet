@@ -721,7 +721,7 @@
                     <input type="text" class="form-control" id="myInput" name="id" value="39">
                 </div>
                 <div class="col-md-3 text-center copy-id">
-                    <button type="button" class="btn btn-success butid" onclick="myFunction()">
+                    <button type="button" class="btn btn-success butid" onclick="copied()">
                          Copy ID</button>
                 </div>
 
@@ -752,12 +752,18 @@
  
 
   <script>
-    function myFunction() {
+    function copied() {
   var copyText = document.getElementById("myInput");
   copyText.select();
   copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
-  alert("Copied id: " + copyText.value);
+//   alert("Copied id: " + copyText.value);
+Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: "Copied id: " + copyText.value,
+  
+            });
 }
     </script>
 
@@ -962,7 +968,7 @@ var google_conversion_format = 3;
 
 .btn-closed {
     color: white !important;
-    background-color: #e69500 !important;
+    background-color: rgb(231, 24, 24) !important;
     border-radius: 0px !important;
     height: 30px !important;
     font-size: 14px !important;
