@@ -95,17 +95,7 @@
           _kms('//i.kissmetrics.com/i.js');
           _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
         </script>
-               <!-- Hotjar Tracking Code for www.cryptobitnet.com -->
-               <script>
-                (function(h,o,t,j,a,r){
-                    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                    h._hjSettings={hjid:1695186,hjsv:6};
-                    a=o.getElementsByTagName('head')[0];
-                    r=o.createElement('script');r.async=1;
-                    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                    a.appendChild(r);
-                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            </script>
+              
    </head>
    <body>
     <div class="container-fluid">
@@ -584,30 +574,33 @@
                </div>
                </div>
                <div class="col-sm-3">
-                <div class="logo-background text-center" data-aos="fade-down-right" data-aos-duration="1800">
+                <div class="logo-background text-center closed-coins" data-aos="fade-down-right" data-aos-duration="1800">
+                    <label class="btn btn-closed">Closed !</label>
                     <img src="img/stellar-logo.png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
                     <p style="color: white;">STELLAR</p>
-                    <div class="middle">
+                    <!-- <div class="middle">
                         <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal-2">Request</button>
-                    </div>
+                    </div> -->
                </div>
                </div>
                <div class="col-sm-3">
-                <div class="logo-background text-center" data-aos="zoom-out-down" data-aos-duration="2000">
+                <div class="logo-background text-center closed-coins" data-aos="zoom-out-down" data-aos-duration="2000">
+                    <label class="btn btn-closed">Closed !</label>
                     <img src="img/dogecoin-2.png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
                     <p style="color: white;">DOGECOIN</p>
-                    <div class="middle">
+                    <!-- <div class="middle">
                         <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal-2">Request</button>
-                    </div>
+                    </div> -->
                </div>
                </div>
                <div class="col-sm-3">
-                <div class="logo-background text-center" data-aos="zoom-in-right" data-aos-duration="2200">
+                <div class="logo-background text-center closed-coins" data-aos="zoom-in-right" data-aos-duration="2200">
+                    <label class="btn btn-closed">Closed !</label>
                     <img src="img/litecoin.png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;">
                     <p style="color: white;">LITECOIN</p>
-                    <div class="middle">
+                    <!-- <div class="middle">
                         <button type="button" class="btn btn-request" data-toggle="modal" data-target="#exampleModal-2">Request</button>
-                    </div>
+                    </div> -->
                </div>
                </div>
            </div>
@@ -664,7 +657,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                 <div class="logo-background text-center" id="back-pay"data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                 <div class="logo-background text-center closed-coins" id="back-pay"data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                      <!-- <img src="img/dollar.png" alt="bitcoin-logo" class="img-responsive" style="width: 70px;"> -->
                      <p style="color: white; font-size: 25px; padding-top: 40px;"><b><i class="fa fa-usd" aria-hidden="true"></i> Cash App</b></p>
                      <p style="color: white; font-size: 16px; padding: 15px;" class="pay-cashapp"><b>CASHAPP(USA ONLY & BTC )</b>: Purchase your investment  from your CashApp according to the selected package. Then send directly into your mining account using the BTC ADDRESS above.</p>
@@ -718,12 +711,16 @@
                     <input type="text" class="form-control" id="account-number" name="account-number" value="456628921">
                  </div>
                  <div class="form-group">
+                    <label for="wallet-address">Wallet Address</label>
+                    <input type="text" class="form-control" id="wallet-address" name="wallet-address" value="46TY7820DY">
+                 </div>
+                 <div class="form-group">
                     <label for="myInput">Your ID (Please Copy)</label>
                     <div class="row">
                      <div class="col-md-8" style="padding-left: 30px !important;">
                     <input type="text" class="form-control" id="myInput" name="id" value="39">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3 text-center copy-id">
                     <button type="button" class="btn btn-success butid" onclick="myFunction()">
                          Copy ID</button>
                 </div>
@@ -732,6 +729,12 @@
                     .butid {
                         border: 1px solid black !important;
                     }
+
+                    @media (max-width: 800px) {
+                        .copy-id {
+                            padding-top: 20px;
+                        }
+                    }
                 </style>
                 </div>
                  </div>
@@ -739,7 +742,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Proceed</button>
+          
         </div>
       </div>
     </div>
@@ -893,11 +896,11 @@ var google_conversion_format = 3;
 </script>
 
 
-<link rel="stylesheet" href="../aos/css/aos.css">
+<!-- <link rel="stylesheet" href="../aos/css/aos.css">
   <script src="../aos/js/aos.js"></script>
   <script>
     AOS.init();
-  </script>
+  </script> -->
 
  <style>
 
@@ -978,8 +981,22 @@ var google_conversion_format = 3;
   background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
+.closed-coins:hover {
+    background-color: #113a56 !important;
+}
+
 .logo-background:hover .middle {
   opacity: 1;
+}
+
+.btn-closed {
+    color: white !important;
+    background-color: #e69500 !important;
+    border-radius: 0px !important;
+    height: 30px !important;
+    font-size: 14px !important;
+    float: left !important;
+    width: 80px !important;
 }
 
 .btn-request {
@@ -992,6 +1009,9 @@ var google_conversion_format = 3;
 @media (max-width: 750px) {
     .btn-request {
         margin-top: -10px !important;
+    }
+    .btn-closed {
+        margin-top: -0px !important;
     }
 }
 
