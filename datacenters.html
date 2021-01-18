@@ -1363,13 +1363,25 @@ pannellum.viewer('panorama', {
 
                         <style>
                           .gm-footer-secure ul {
-                            list-style-type: none !important;
-                          }
+                                      list-style-type: none !important;
+                                    }
 
-                          .gm-footer-secure ul li {
-                            display: inline-block;
-                            padding-right: 30px;
-                          }
+                                    .gm-footer-secure ul li {
+                                      display: inline-block;
+                                      padding-right: 250px;
+                                    }
+
+                                    @media(max-width: 800px) {
+                                      .gm-footer-secure ul li {
+                                      padding-right: 180px;
+                                    }
+                                    }
+
+                                    @media(max-width: 480px) {
+                                      .gm-footer-secure ul li {
+                                      padding-right: 30px;
+                                    }
+                                    }
                         </style>
 
 
